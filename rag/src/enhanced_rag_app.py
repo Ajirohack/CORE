@@ -57,7 +57,7 @@ def setup_api_keys():
         os.environ["COHERE_API_KEY"] = "vDWl4kHEF8WND6m8gdCkEfttxeDsitrOEqXI90QE"
         
     if not os.environ.get("HUGGINGFACE_API_KEY"):
-        os.environ["HUGGINGFACE_API_KEY"] = "***REMOVED***"
+        os.environ["HUGGINGFACE_API_KEY"] = os.getenv("HUGGINGFACE_API_KEY", "")
         
     logger.info("API keys configured for all providers")
 

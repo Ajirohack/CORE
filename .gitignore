@@ -218,3 +218,7 @@ rag/logs/
 test_output/
 test_data/
 temp_*
+
+# Embedded repositories (exclude to avoid submodule conflicts)
+packages/tools/proposed-untested/financial-business-app/
+packages/tools/proposed-untested/sd.webui/webui/
