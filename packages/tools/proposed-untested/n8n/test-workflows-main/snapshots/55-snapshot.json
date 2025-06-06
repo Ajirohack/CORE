@@ -1,0 +1,196 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078266798,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Hunter": [
+          {
+            "hints": [],
+            "startTime": 1738078266798,
+            "executionTime": 800,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "value": "bart@n8n.io",
+                      "type": "personal",
+                      "confidence": 99,
+                      "sources": [
+                        "json array"
+                      ],
+                      "first_name": "Bart",
+                      "last_name": "Veldhuizen",
+                      "position": "Community Manager",
+                      "seniority": "senior",
+                      "department": "management",
+                      "linkedin": "https://www.linkedin.com/in/bartveldhuizen",
+                      "twitter": {
+                        "object": true
+                      },
+                      "phone_number": {
+                        "object": true
+                      },
+                      "verification": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Hunter1": [
+          {
+            "hints": [],
+            "startTime": 1738078267599,
+            "executionTime": 2508,
+            "source": [
+              {
+                "previousNode": "Hunter"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "first_name": {
+                        "object": true
+                      },
+                      "last_name": {
+                        "object": true
+                      },
+                      "email": {
+                        "object": true
+                      },
+                      "score": {
+                        "object": true
+                      },
+                      "domain": "n8n.io",
+                      "accept_all": {
+                        "object": true
+                      },
+                      "position": {
+                        "object": true
+                      },
+                      "twitter": {
+                        "object": true
+                      },
+                      "linkedin_url": {
+                        "object": true
+                      },
+                      "phone_number": {
+                        "object": true
+                      },
+                      "company": {
+                        "object": true
+                      },
+                      "sources": [
+                        "json array"
+                      ],
+                      "verification": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Hunter2": [
+          {
+            "hints": [],
+            "startTime": 1738078270107,
+            "executionTime": 1371,
+            "source": [
+              {
+                "previousNode": "Hunter1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "status": "valid",
+                      "result": "deliverable",
+                      "_deprecation_notice": "Using result is deprecated, use status instead",
+                      "score": 90,
+                      "email": "nodeqa@n8n.io",
+                      "regexp": true,
+                      "gibberish": false,
+                      "disposable": false,
+                      "webmail": false,
+                      "mx_records": true,
+                      "smtp_server": true,
+                      "smtp_check": true,
+                      "accept_all": false,
+                      "block": false,
+                      "sources": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Hunter2"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:31:06.797Z",
+  "stoppedAt": "2025-01-28T15:31:11.478Z",
+  "status": "running",
+  "finished": true
+}

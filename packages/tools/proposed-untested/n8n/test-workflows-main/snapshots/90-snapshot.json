@@ -1,0 +1,233 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078291829,
+            "executionTime": 1,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Date & Time": [
+          {
+            "hints": [],
+            "startTime": 1738078291830,
+            "executionTime": 2,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "03/03/2021"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Date & Time1": [
+          {
+            "hints": [],
+            "startTime": 1738078291832,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Date & Time"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "2021/03/03"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Date & Time2": [
+          {
+            "hints": [],
+            "startTime": 1738078291832,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "March 03 2021"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Date & Time3": [
+          {
+            "hints": [],
+            "startTime": 1738078291833,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "03-03-2021"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Date & Time4": [
+          {
+            "hints": [],
+            "startTime": 1738078291834,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Date & Time3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "2021-03-03"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Date & Time5": [
+          {
+            "hints": [],
+            "startTime": 1738078291834,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "1614764492"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function": [
+          {
+            "hints": [],
+            "startTime": 1738078291835,
+            "executionTime": 6,
+            "source": [
+              {
+                "previousNode": "Date & Time5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": "1614764492"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Function"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:31:31.829Z",
+  "stoppedAt": "2025-01-28T15:31:31.841Z",
+  "status": "running",
+  "finished": true
+}

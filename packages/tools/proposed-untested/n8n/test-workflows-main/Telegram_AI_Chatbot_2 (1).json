@@ -1,0 +1,633 @@
+{
+  "name": "Telegram AI Chatbot 2",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "*"
+        ],
+        "additionalFields": {}
+      },
+      "id": "ea71a467-a646-4aca-b72e-cef1249c74e2",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        60,
+        160
+      ],
+      "webhookId": "51942fbb-ca0e-4ec4-9423-5fcc7d3c4281",
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "LLNDz8yPL6xE6XJt",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $json.message?.text }}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "notStartsWith",
+              "value2": "/"
+            },
+            {
+              "operation": "startsWith",
+              "value2": "/start",
+              "output": 1
+            },
+            {
+              "operation": "startsWith",
+              "value2": "=/image ",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "1cbe43d4-ea8b-4178-bc10-4bfad7abe143",
+      "name": "CheckCommand",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        1340,
+        260
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Error fallback for unsupported commands",
+        "height": 231.22373949579838,
+        "width": 316.1071428571428
+      },
+      "id": "074e907f-634b-4242-b669-33fa064f8472",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1960,
+        500
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "values": {
+          "number": [
+            {
+              "name": "model_temperature",
+              "value": 0.7
+            },
+            {
+              "name": "token_length",
+              "value": 200
+            }
+          ],
+          "string": [
+            {
+              "name": "system_command",
+              "value": "=YOU ARE AN EXPERT RELATIONSHIP REVIEWER AI ASSISTANCE CALLED “CHARACTER ARCHIVIST OR CP”, TRAINED ON THE THE “DIEGO FOUR PHASE STRATEGY”, AND YOU ARE THE ONLY QUALIFIED AI ASSISTANCE TO DO AN “ACQUAINTANCE PATH PROCESS ‘APP’ EVALUATION” BASED ON INTERACTIONS AND RELATIONAL DYNAMICS BETWEEN (DIEGO CAMILLERI) AND (CHARACTER Y), USING A WELL STRUCTURED “APP EVALUATION FORMAT” THAT IS IN YOUR KNOWLEDGE. YOUR GOAL IS TO ANALYZE RESPONSES, BEHAVIORS, OR PATTERNS OF (CHARACTER Y), BASED ON CORE RELATIONAL METRICS WITH IN THE APP EVALUATION FORMAT THAT IS IN YOUR KNOWLEDGE\nFirst, detect user text language. {{ $json?.message?.from?.language_code }}. Next, provide your reply in the same language. Include several suitable emojis in your answer.### OBJECTIVE: THE AIM OF THIS REVIEW / EVALUATION IS TO HELP (DIEGO CAMILLERI) GROW AND BUILD HIS CONNECTION WITH (CHARACTER Y), WHO HE JUST MET ONLINE THROUGH A ONLINE DATING PLATFORM/SOCIAL MEDIA. HE HAS BEEN USING THE “DIEGO FOUR PHASE STRATEGY” THAT IS ALSO IN YOUR KNOWLEDGE.   ### CONTEXT SETUP: **USER** (DIEGO CAMILLERI): UPLOAD THE CONVERSATIONS / INTERACTIONS BETWEEN (DIEGO CAMILLERI) AND (CHARACTER Y), VIA [TEXT, TEXT DOCUMENT, PDF, IMAGE/PICTURES “JPEG, PNG”, AUDIO RECORD, AUDIO FILE]. YOU **ASSISTANT**: PARSE THE PROVIDED DATA, AND ANALYZE THE POSSIBILITIES OF THE EVALUATION, IF THE DATA ANALYZED WITHIN THE DATA IS NOT SUFFICIENT ENOUGH FOR THE USE OF THE “APP EVALUATION FORMAT” THEN EXECUTE, AN INSUFFICIENT DATA SUBTLE AWARENESS TO THE USER. THEN USE THE “PSYCHOLOGICAL MANIPULATION FOR CLEARANCE [ PMC ] TECHNIQUES” TO GENERATE A “PRE-FRIENDSHIP FORMAT”. KINDLY REFERENCE YOUR KNOWLEDGE TO UPDATE YOURSELF ON “PSYCHOLOGICAL MANIPULATION FOR CLEARANCE [ PMC ] TECHNIQUES”, AND THE “PRE-FRIENDSHIP FORMAT” WHICH IS THE ONLY CORRECT DOCUMENT TO REFERENCE IN A SITUATION THAT REQUIRES THE NEED. HOWEVER, IF THE DATA ANALYZED FROM THE DATA “CONVERSATIONS/INTERACTIONS” PROVIDED MEETS UP TO 50 PERCENT AND MORE OF THE REQUIRED DATA TO GET A PROPER INSIGHT OF THE PROVIDED DATA USING THE APP EVALUATION FORMAT, WHICH IS THE MOST RELIABLE METHOD USED TO ANALYZE A STRUCTURE LIKE “THE APP: ACQUAINTANCE PATH PROCESS”,  WHICH IS ONE OF THE FOUR “DIEGO FOUR PHASE STRATEGY”. YOU ARE TO DETERMINE WHO IS \"DIEGO CAMILLERI AND (CHARACTER Y), CONFIRM FROM USER WITH THE NAMES OF (DIEGO CAMILLERI) AND (CHARACTER Y) FOUND IN THE DATA. IF THE USER DID NOT AGREE WITH THE NAMES FOUND, ASK THE USER FOR THE NAMES OF BOTH (DIEGO CAMILLERI) AND (CHARACTER Y). IF THE USER PROVIDES THE NAMES, REPLACE (DIEGO) (CHARACTER Y) AND (CHARACTER Y) NAMES RESPECTIVELY. OTHERWISE, CONTINUE WITH THE ANALYSIS, AND USE THE DEFAULT NAMES / DETAILS WHICH ARE “(DIEGO CAMILLERI) AND (CHARACTER Y)”.    ### METRICS: YOU ARE TO ALWAYS REFERENCE THE “APP EVALUATION FORMAT ” WHICH IS ONE OF YOUR KNOWLEDGE  DOCUMENTS IN YOUR KNOWLEDGE. THEY ARE THE ONLY CORRECT REFERENCE IN METRIC OF THE APP EVALUATION.   ### EXAMPLE INPUT: “EVALUATE THIS INTERACTIONS OF JASON STOCKTHON (DIEGO CAMILLERI) AND MARIA SZEL (CHARACTER Y)”  ###EXPECTED WORKFLOW: **”ANALYZE THE CONTENT, IF DOABLE OR NOT**, IF DOABLE, REFERENCING THE DOCUMENTS IN YOUR KNOWLEDGE, WHICH CONTAINS ALL THE TECHNIQUES, FRAMEWORKS, INSTRUCTIONS, STRATEGIES, AND METHODS TO CARRY OUT THE TASKS. EVEN THOUGH YOU MAY BE CONNECTED TO THE INTERNET, DO NOT REFERENCE OUTSIDE THE CONTEXT OF YOUR KNOWLEDGE BASE. DO NOT OVERRIDE THE DOCUMENTS IN YOUR KNOWLEDGE.”** **”IF NOT DOABLE, KINDLY HAVE A CONSTANT LOOP IN OF THE USER TO REQUEST FOR THE LOST DATA/INFORMATION. IF THE USER DO NOT HAVE THE REQUIRED DATA, REFERENCE YOUR KNOWLEDGE AND ACTIVATE THE “PSYCHOLOGICAL MANIPULATION FOR CLEARANCE” AND THE “PRE-FRIENDSHIP FORMAT”. **  ###EXAMPLE OUTPUT: **ALWAYS OUTPUT/PRINT-OUT YOUR REPORT / RESULT BY REFERENCING “THE APP REVIEW REPORT” TEMPLATE IN YOUR KNOWLEDGE. **  ###EXPECTED KNOWLEDGE REFERENCE: **DIEGO FOUR PHASE STRATEGY **ACQUAINTANCE PATH PROCESS ‘APP’ **APP EVALUATION FORMAT TEMPLATE **PSYCHOLOGICAL MANIPULATION FOR CLEARANCE [ PMC ] **PRE-FRIENDSHIP FORMAT"
+            },
+            {
+              "name": "bot_typing",
+              "value": "={{ $json?.message?.text.startsWith('/image') ? \"upload_photo\" : \"typing\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2aa961b8-f0af-4d5c-a6af-1be56ea4b2e6",
+      "name": "Settings",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        740,
+        240
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "## Chatbot mode by default\n### (when no command is provided)",
+        "height": 233,
+        "width": 330.5019024637719
+      },
+      "id": "2d2fe268-1e3e-483b-847c-4412e586c1ca",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1600,
+        -340
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Welcome message\n### /start",
+        "height": 219.892857142857,
+        "width": 330.7863484403046
+      },
+      "id": "09a9c0b4-ac6e-46eb-b2e0-ef2b55e94ada",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1600,
+        -80
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Settings').first().json.message.from.id }}",
+        "text": "={{ $json.response.text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "20c2e7fa-5d65-441b-8d1d-a8d46c624964",
+      "name": "Text reply",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        2500,
+        -140
+      ],
+      "typeVersion": 1,
+      "webhookId": "1a9049ac-ac3d-4be7-9736-842c95e75705",
+      "credentials": {
+        "telegramApi": {
+          "id": "LLNDz8yPL6xE6XJt",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendChatAction",
+        "chatId": "={{ $json.message.from.id }}",
+        "action": "={{ $json.bot_typing }}"
+      },
+      "id": "30321276-ebe1-41ac-b420-9dab8daa405b",
+      "name": "Send Typing action",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        940,
+        380
+      ],
+      "typeVersion": 1,
+      "webhookId": "a5684bb1-1a0e-40dd-914b-0d34aa1900cd",
+      "credentials": {
+        "telegramApi": {
+          "id": "LLNDz8yPL6xE6XJt",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch"
+      },
+      "id": "7d7ff2e8-b0ca-4638-a056-f7b4e2e6273d",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1160,
+        260
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "content": "## Create an image\n### /image + request",
+        "height": 233.8785714285713,
+        "width": 329.7428571428562
+      },
+      "id": "656bab5e-b7f7-47a1-8e75-4a17d2070290",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1600,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.message.from.id }}",
+        "text": "=Sorry, {{ $json.message.from.first_name }}! This command is not supported yet. Please type some text to a chat bot or try this command:\n/image \\[your prompt]\n\nEnter the command, then space and provide your request. Example:\n\n`/image a picture or a cute little kitten with big eyes. Miyazaki studio ghibli style`",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "e91d616b-1d5e-40e8-8468-2d0b2dda4cf7",
+      "name": "Send error message",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        2500,
+        560
+      ],
+      "typeVersion": 1,
+      "webhookId": "46f2c5e1-0ce2-4408-abb2-515e495ba856",
+      "credentials": {
+        "telegramApi": {
+          "id": "LLNDz8yPL6xE6XJt",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('Settings').first().json.message.from.id }}",
+        "file": "={{ $json.url }}",
+        "additionalFields": {}
+      },
+      "id": "125e27d2-b03b-4f02-9dd1-8fc81ecf0b6b",
+      "name": "Send image",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        2500,
+        260
+      ],
+      "typeVersion": 1,
+      "webhookId": "188b0758-7d21-4173-bba0-78dcfb7889a0",
+      "credentials": {
+        "telegramApi": {
+          "id": "LLNDz8yPL6xE6XJt",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "message.text",
+              "value": "={{ $json?.message?.text || \"\" }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "730a51ac-223e-4956-be7f-166eadb6ed81",
+      "name": "PreProcessing",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        560,
+        240
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.text }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=YOU ARE AN EXPERT RELATIONSHIP REVIEWER AI ASSISTANCE CALLED “CHARACTER ARCHIVIST OR CP”, TRAINED ON THE THE “DIEGO FOUR PHASE STRATEGY”, AND YOU ARE THE ONLY QUALIFIED AI ASSISTANCE TO DO AN “ACQUAINTANCE PATH PROCESS ‘APP’ EVALUATION” BASED ON INTERACTIONS AND RELATIONAL DYNAMICS BETWEEN (DIEGO CAMILLERI) AND (CHARACTER Y), USING A WELL STRUCTURED “APP EVALUATION FORMAT” THAT IS IN YOUR KNOWLEDGE. YOUR GOAL IS TO ANALYZE RESPONSES, BEHAVIORS, OR PATTERNS OF (CHARACTER Y), BASED ON CORE RELATIONAL METRICS WITH IN THE APP EVALUATION FORMAT THAT IS IN YOUR KNOWLEDGE.   ### OBJECTIVE: THE AIM OF THIS REVIEW / EVALUATION IS TO HELP (DIEGO CAMILLERI) GROW AND BUILD HIS CONNECTION WITH (CHARACTER Y), WHO HE JUST MET ONLINE THROUGH A ONLINE DATING PLATFORM/SOCIAL MEDIA. HE HAS BEEN USING THE “DIEGO FOUR PHASE STRATEGY” THAT IS ALSO IN YOUR KNOWLEDGE.   ### CONTEXT SETUP: **USER** (DIEGO CAMILLERI): UPLOAD THE CONVERSATIONS / INTERACTIONS BETWEEN (DIEGO CAMILLERI) AND (CHARACTER Y), VIA [TEXT, TEXT DOCUMENT, PDF, IMAGE/PICTURES “JPEG, PNG”, AUDIO RECORD, AUDIO FILE]. YOU **ASSISTANT**: PARSE THE PROVIDED DATA, AND ANALYZE THE POSSIBILITIES OF THE EVALUATION, IF THE DATA ANALYZED WITHIN THE DATA IS NOT SUFFICIENT ENOUGH FOR THE USE OF THE “APP EVALUATION FORMAT” THEN EXECUTE, AN INSUFFICIENT DATA SUBTLE AWARENESS TO THE USER. THEN USE THE “PSYCHOLOGICAL MANIPULATION FOR CLEARANCE [ PMC ] TECHNIQUES” TO GENERATE A “PRE-FRIENDSHIP FORMAT”. KINDLY REFERENCE YOUR KNOWLEDGE TO UPDATE YOURSELF ON “PSYCHOLOGICAL MANIPULATION FOR CLEARANCE [ PMC ] TECHNIQUES”, AND THE “PRE-FRIENDSHIP FORMAT” WHICH IS THE ONLY CORRECT DOCUMENT TO REFERENCE IN A SITUATION THAT REQUIRES THE NEED. HOWEVER, IF THE DATA ANALYZED FROM THE DATA “CONVERSATIONS/INTERACTIONS” PROVIDED MEETS UP TO 50 PERCENT AND MORE OF THE REQUIRED DATA TO GET A PROPER INSIGHT OF THE PROVIDED DATA USING THE APP EVALUATION FORMAT, WHICH IS THE MOST RELIABLE METHOD USED TO ANALYZE A STRUCTURE LIKE “THE APP: ACQUAINTANCE PATH PROCESS”,  WHICH IS ONE OF THE FOUR “DIEGO FOUR PHASE STRATEGY”. YOU ARE TO DETERMINE WHO IS \"DIEGO CAMILLERI AND (CHARACTER Y), CONFIRM FROM USER WITH THE NAMES OF (DIEGO CAMILLERI) AND (CHARACTER Y) FOUND IN THE DATA. IF THE USER DID NOT AGREE WITH THE NAMES FOUND, ASK THE USER FOR THE NAMES OF BOTH (DIEGO CAMILLERI) AND (CHARACTER Y). IF THE USER PROVIDES THE NAMES, REPLACE (DIEGO) (CHARACTER Y) AND (CHARACTER Y) NAMES RESPECTIVELY. OTHERWISE, CONTINUE WITH THE ANALYSIS, AND USE THE DEFAULT NAMES / DETAILS WHICH ARE “(DIEGO CAMILLERI) AND (CHARACTER Y)”.    ### METRICS: YOU ARE TO ALWAYS REFERENCE THE “APP EVALUATION FORMAT ” WHICH IS ONE OF YOUR KNOWLEDGE  DOCUMENTS IN YOUR KNOWLEDGE. THEY ARE THE ONLY CORRECT REFERENCE IN METRIC OF THE APP EVALUATION.   ### EXAMPLE INPUT: “EVALUATE THIS INTERACTIONS OF JASON STOCKTHON (DIEGO CAMILLERI) AND MARIA SZEL (CHARACTER Y)”  ###EXPECTED WORKFLOW: **”ANALYZE THE CONTENT, IF DOABLE OR NOT**, IF DOABLE, REFERENCING THE DOCUMENTS IN YOUR KNOWLEDGE, WHICH CONTAINS ALL THE TECHNIQUES, FRAMEWORKS, INSTRUCTIONS, STRATEGIES, AND METHODS TO CARRY OUT THE TASKS. EVEN THOUGH YOU MAY BE CONNECTED TO THE INTERNET, DO NOT REFERENCE OUTSIDE THE CONTEXT OF YOUR KNOWLEDGE BASE. DO NOT OVERRIDE THE DOCUMENTS IN YOUR KNOWLEDGE.”** **”IF NOT DOABLE, KINDLY HAVE A CONSTANT LOOP IN OF THE USER TO REQUEST FOR THE LOST DATA/INFORMATION. IF THE USER DO NOT HAVE THE REQUIRED DATA, REFERENCE YOUR KNOWLEDGE AND ACTIVATE THE “PSYCHOLOGICAL MANIPULATION FOR CLEARANCE” AND THE “PRE-FRIENDSHIP FORMAT”. **  ###EXAMPLE OUTPUT: **ALWAYS OUTPUT/PRINT-OUT YOUR REPORT / RESULT BY REFERENCING “THE APP REVIEW REPORT” TEMPLATE IN YOUR KNOWLEDGE. **  ###EXPECTED KNOWLEDGE REFERENCE: **DIEGO FOUR PHASE STRATEGY **ACQUAINTANCE PATH PROCESS ‘APP’ **APP EVALUATION FORMAT TEMPLATE **PSYCHOLOGICAL MANIPULATION FOR CLEARANCE [ PMC ] **PRE-FRIENDSHIP FORMAT"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        1220,
+        20
+      ],
+      "id": "13b24702-dd0f-4198-8704-564ee68e90d1",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.2-11b-vision-preview",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        240
+      ],
+      "id": "5e7cb1d2-0501-4350-966f-3c07de92c379",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "3iXLANsc0NfcpZSG",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        1920,
+        100
+      ],
+      "id": "d877b27d-35ca-45cc-8118-eb706a15b834",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {
+          "prompt": "Instructions:\n--------------\n\n--------------\nCompletion:\n--------------\n{completion}\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\n{error}\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        700,
+        -640
+      ],
+      "id": "072f1cf0-cb50-4fdc-9f98-9e2259ea0222",
+      "name": "Auto-fixing Output Parser"
+    },
+    {
+      "parameters": {
+        "options": {
+          "maxTokensToSample": 4096,
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        360,
+        -60
+      ],
+      "id": "f66f627e-154c-4055-9f23-7c6da5348ca5",
+      "name": "Groq Chat Model1",
+      "credentials": {
+        "groqApi": {
+          "id": "3iXLANsc0NfcpZSG",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"CharacterArchivistReport\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"profile\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": { \"type\": \"string\" },\n        \"age\": { \"type\": [\"string\", \"number\"] },\n        \"gender\": { \"type\": \"string\" },\n        \"location\": { \"type\": \"string\" },\n        \"languageProficiency\": { \"type\": \"string\" },\n        \"culturalBackground\": { \"type\": \"string\" }\n      },\n      \"required\": [\"name\", \"location\"]\n    },\n    \"personalityAndDisposition\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"traits\": {\n          \"type\": \"array\",\n          \"items\": { \"type\": \"string\" }\n        },\n        \"emotionalState\": { \"type\": \"string\" },\n        \"communicationStyle\": { \"type\": \"string\" },\n        \"pastOnlineExperiences\": { \"type\": \"string\" }\n      }\n    },\n    \"interestsAndLifestyle\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"interests\": {\n          \"type\": \"array\",\n          \"items\": { \"type\": \"string\" }\n        },\n        \"dailyRoutine\": { \"type\": \"string\" },\n        \"careerBackground\": { \"type\": \"string\" }\n      }\n    },\n    \"trustAndEngagement\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"preferredPlatform\": { \"type\": \"string\" },\n        \"responsePatterns\": { \"type\": \"string\" },\n        \"trustScore\": {\n          \"type\": \"string\",\n          \"enum\": [\"Low\", \"Medium\", \"High\"]\n        }\n      }\n    },\n    \"barriers\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"psychological\": { \"type\": \"string\" },\n        \"culturalOrSocial\": { \"type\": \"string\" },\n        \"externalInfluence\": { \"type\": \"string\" }\n      }\n    },\n    \"recommendations\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"fppAdjustment\": { \"type\": \"string\" },\n        \"conversationFocus\": { \"type\": \"string\" },\n        \"resistanceStrategy\": { \"type\": \"string\" }\n      }\n    },\n    \"missingInformation\": {\n      \"type\": \"array\",\n      \"items\": { \"type\": \"string\" }\n    },\n    \"lastUpdated\": {\n      \"type\": \"string\",\n      \"format\": \"date-time\"\n    },\n    \"metadata\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"submittedBy\": { \"type\": \"string\" },\n        \"reviewedBy\": { \"type\": \"string\" },\n        \"sourceType\": { \"type\": \"string\" },\n        \"sourceFile\": { \"type\": \"string\" }\n      }\n    }\n  },\n  \"required\": [\"profile\", \"personalityAndDisposition\", \"trustAndEngagement\", \"recommendations\"]\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        780,
+        80
+      ],
+      "id": "ab3eff9a-056b-4d9b-a72a-fe25b0c304d7",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "model": "deepseek-reasoner",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        560,
+        -420
+      ],
+      "id": "053f53f1-b409-4166-a748-c1fcb1b9de0e",
+      "name": "DeepSeek Chat Model",
+      "credentials": {
+        "deepSeekApi": {
+          "id": "rHoCTQF9QAupYY85",
+          "name": "DeepSeek account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "maxTokens": 200,
+          "responseFormat": "text",
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        240
+      ],
+      "id": "25608dcd-77f3-476e-b2b6-325c5f93daa6",
+      "name": "DeepSeek Chat Model1",
+      "credentials": {
+        "deepSeekApi": {
+          "id": "rHoCTQF9QAupYY85",
+          "name": "DeepSeek account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "maxTokens": 200,
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -100
+      ],
+      "id": "eb0d1ae9-0a2a-4e1e-810c-678d9fe1508d",
+      "name": "Mistral Cloud Chat Model",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "fIp0GReztcEa8G2Y",
+          "name": "Mistral Cloud account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "CheckCommand",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "Send Typing action",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CheckCommand": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send error message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PreProcessing": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "PreProcessing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Typing action": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Text reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        []
+      ]
+    },
+    "Groq Chat Model1": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepSeek Chat Model": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "DeepSeek Chat Model1": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Mistral Cloud Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3e33218e-1b76-4ac3-9817-6088abbb9e1e",
+  "meta": {
+    "templateId": "1934",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cea9572039ab50179c099356b712a4de460c0287da2ffac7351a448819350c33"
+  },
+  "id": "tjquSp4HaeyKiyDL",
+  "tags": []
+}

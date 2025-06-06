@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG System with Multiple LLM Providers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .provider-badge {
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        .source-badge {
+            font-size: 0.75rem;
+            margin-right: 5px;
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        .result-card {
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+        }
+        #loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #response-area {
+            display: none;
+        }
+        .nav-pills .nav-link {
+            color: #495057;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .model-selector {
+            max-width: 250px;
+        }
+        .temperature-slider {
+            width: 100%;
+        }
+        .system-message {
+            font-size: 0.85rem;
+        }
+        .source-list {
+            font-size: 0.85rem;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .provider-info {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">RAG System with Multiple LLM Providers</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-search-tab" data-bs-toggle="pill" data-bs-target="#pills-search" type="button" role="tab" aria-controls="pills-search" aria-selected="true">Search Only</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-ask-tab" data-bs-toggle="pill" data-bs-target="#pills-ask" type="button" role="tab" aria-controls="pills-ask" aria-selected="false">LLM Response</button>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- Search Tab -->
+                            <div class="tab-pane fade show active" id="pills-search" role="tabpanel" aria-labelledby="pills-search-tab">
+                                <form id="search-form">
+                                    <div class="mb-3">
+                                        <label for="search-query" class="form-label">Search Query</label>
+                                        <input type="text" class="form-control" id="search-query" placeholder="What are the components of the RAG system?" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="num-results" class="form-label">Number of Results</label>
+                                        <input type="number" class="form-control" id="num-results" value="5" min="1" max="20">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Ask Tab -->
+                            <div class="tab-pane fade" id="pills-ask" role="tabpanel" aria-labelledby="pills-ask-tab">
+                                <form id="ask-form">
+                                    <div class="mb-3">
+                                        <label for="ask-query" class="form-label">Question</label>
+                                        <input type="text" class="form-control" id="ask-query" placeholder="How does the vector database work?" required>
+                                    </div>
+                                    
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="llm-provider" class="form-label">LLM Provider</label>
+                                            <select class="form-select" id="llm-provider">
+                                                {% for key, name in providers.items() %}
+                                                <option value="{{ key }}" {% if key == current_provider %}selected{% endif %}>{{ name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <div class="provider-info mt-1" id="provider-info">
+                                                Using Groq as the LLM provider
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="llm-model" class="form-label">Model</label>
+                                            <select class="form-select" id="llm-model">
+                                                {% for model in default_models.get(current_provider, []) %}
+                                                <option value="{{ model }}">{{ model }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="temperature" class="form-label">Temperature: <span id="temperature-value">0</span></label>
+                                        <input type="range" class="form-range temperature-slider" id="temperature" min="0" max="1" step="0.1" value="0">
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="system-message" class="form-label">System Message (Optional)</label>
+                                        <textarea class="form-control system-message" id="system-message" rows="2" placeholder="You are a helpful AI assistant integrated with a RAG system..."></textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Ask Question</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loading indicator -->
+                <div id="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Processing your request...</p>
+                </div>
+                
+                <!-- Response area -->
+                <div id="response-area" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" id="response-title">Results</h5>
+                        <hr>
+                        <div id="response-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Handle temperature slider
+            $('#temperature').on('input', function() {
+                $('#temperature-value').text($(this).val());
+            });
+            
+            // Update provider info
+            $('#llm-provider').on('change', function() {
+                const provider = $(this).val();
+                $('#provider-info').text(`Using ${provider} as the LLM provider`);
+                
+                // Update models for the selected provider
+                $.post('/get_models', {provider: provider}, function(data) {
+                    $('#llm-model').empty();
+                    
+                    data.models.forEach(function(model) {
+                        $('#llm-model').append(`<option value="${model}">${model}</option>`);
+                    });
+                });
+            });
+            
+            // Handle search form submission
+            $('#search-form').on('submit', function(e) {
+                e.preventDefault();
+                
+                const query = $('#search-query').val();
+                const numResults = $('#num-results').val();
+                
+                $('#loading').show();
+                $('#response-area').hide();
+                
+                $.post('/search', {
+                    query: query,
+                    num_results: numResults
+                }, function(data) {
+                    $('#loading').hide();
+                    $('#response-area').show();
+                    
+                    $('#response-title').text(`Search Results for: "${data.query}"`);
+                    
+                    let resultsHtml = '';
+                    if (data.results && data.results.length > 0) {
+                        resultsHtml = '<div class="list-group">';
+                        
+                        data.results.forEach(function(result) {
+                            resultsHtml += `
+                                <div class="list-group-item result-card">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="mb-1">Result #${result.id}</h6>
+                                        <span class="source-badge badge bg-light text-dark">Source: ${result.source}</span>
+                                    </div>
+                                    <pre class="mb-1">${result.content}</pre>
+                                </div>
+                            `;
+                        });
+                        
+                        resultsHtml += '</div>';
+                    } else {
+                        resultsHtml = '<div class="alert alert-warning">No results found</div>';
+                    }
+                    
+                    $('#response-content').html(resultsHtml);
+                })
+                .fail(function(error) {
+                    $('#loading').hide();
+                    $('#response-area').show();
+                    
+                    $('#response-title').text('Error');
+                    $('#response-content').html(`
+                        <div class="alert alert-danger">
+                            ${error.responseJSON ? error.responseJSON.error : 'An error occurred while processing your request'}
+                        </div>
+                    `);
+                });
+            });
+            
+            // Handle ask form submission
+            $('#ask-form').on('submit', function(e) {
+                e.preventDefault();
+                
+                const query = $('#ask-query').val();
+                const provider = $('#llm-provider').val();
+                const model = $('#llm-model').val();
+                const temperature = $('#temperature').val();
+                const systemMessage = $('#system-message').val();
+                
+                $('#loading').show();
+                $('#response-area').hide();
+                
+                $.post('/ask', {
+                    query: query,
+                    provider: provider,
+                    model: model,
+                    temperature: temperature,
+                    system_message: systemMessage
+                }, function(data) {
+                    $('#loading').hide();
+                    $('#response-area').show();
+                    
+                    if (data.error) {
+                        $('#response-title').text('Error');
+                        $('#response-content').html(`
+                            <div class="alert alert-danger">
+                                ${data.error}
+                            </div>
+                        `);
+                        return;
+                    }
+                    
+                    $('#response-title').text(`Answer from ${data.provider} (${data.model})`);
+                    
+                    let responseHtml = `
+                        <div class="mb-3">
+                            <strong>Question:</strong> ${data.query}
+                        </div>
+                        <div class="mb-3">
+                            <strong>Answer:</strong>
+                            <pre class="mt-2 p-3 bg-light">${data.answer}</pre>
+                        </div>
+                    `;
+                    
+                    if (data.sources && data.sources.length > 0) {
+                        responseHtml += `
+                            <div class="source-list">
+                                <strong>Sources:</strong>
+                                <ul class="mt-2">
+                        `;
+                        
+                        data.sources.forEach(function(source) {
+                            responseHtml += `<li>${source}</li>`;
+                        });
+                        
+                        responseHtml += `
+                                </ul>
+                            </div>
+                        `;
+                    }
+                    
+                    $('#response-content').html(responseHtml);
+                })
+                .fail(function(error) {
+                    $('#loading').hide();
+                    $('#response-area').show();
+                    
+                    $('#response-title').text('Error');
+                    $('#response-content').html(`
+                        <div class="alert alert-danger">
+                            ${error.responseJSON ? error.responseJSON.error : 'An error occurred while processing your request'}
+                        </div>
+                    `);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

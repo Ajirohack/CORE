@@ -1,0 +1,77 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Execute Workflow\"": [
+          {
+            "hints": [],
+            "startTime": 1738078176304,
+            "executionTime": 1,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "VirusTotal HTTP Request": [
+          {
+            "hints": [
+              {
+                "message": "To split the contents of ‘data’ into separate items for easier processing, add a ‘Split Out’ node after this one",
+                "location": "outputPane"
+              }
+            ],
+            "startTime": 1738078176305,
+            "executionTime": 532,
+            "source": [
+              {
+                "previousNode": "When clicking \"Execute Workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "VirusTotal HTTP Request"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:36.303Z",
+  "stoppedAt": "2025-01-28T15:29:36.837Z",
+  "status": "running",
+  "finished": true
+}

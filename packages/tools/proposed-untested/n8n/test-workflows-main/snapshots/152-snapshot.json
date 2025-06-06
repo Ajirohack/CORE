@@ -1,0 +1,167 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078147784,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend": [
+          {
+            "hints": [],
+            "startTime": 1738078147784,
+            "executionTime": 666,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "en": 0.995190441608429
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend1": [
+          {
+            "hints": [],
+            "startTime": 1738078148450,
+            "executionTime": 683,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "Sentiment": "POSITIVE",
+                      "SentimentScore": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend2": [
+          {
+            "hints": [],
+            "startTime": 1738078149134,
+            "executionTime": 638,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "BeginOffset": 0,
+                      "EndOffset": 3,
+                      "Score": 0.4956623315811157,
+                      "Text": "n8n",
+                      "Type": "OTHER"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "BeginOffset": 18,
+                      "EndOffset": 23,
+                      "Score": 0.4929276704788208,
+                      "Text": "eight",
+                      "Type": "OTHER"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "BeginOffset": 53,
+                      "EndOffset": 62,
+                      "Score": 0.7383686304092407,
+                      "Text": "every app",
+                      "Type": "QUANTITY"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "BeginOffset": 147,
+                      "EndOffset": 158,
+                      "Score": 0.9422106146812439,
+                      "Text": "single line",
+                      "Type": "QUANTITY"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AWS Comprehend2"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:07.783Z",
+  "stoppedAt": "2025-01-28T15:29:09.772Z",
+  "status": "running",
+  "finished": true
+}

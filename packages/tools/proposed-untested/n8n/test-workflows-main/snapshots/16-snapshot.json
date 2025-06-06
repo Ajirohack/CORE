@@ -1,0 +1,129 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078155609,
+            "executionTime": 1,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenWeatherMap": [
+          {
+            "hints": [],
+            "startTime": 1738078155610,
+            "executionTime": 225,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "coord": {
+                        "object": true
+                      },
+                      "weather": [
+                        "json array"
+                      ],
+                      "base": "stations",
+                      "main": {
+                        "object": true
+                      },
+                      "visibility": 10000,
+                      "wind": {
+                        "object": true
+                      },
+                      "clouds": {
+                        "object": true
+                      },
+                      "dt": 1738078021,
+                      "sys": {
+                        "object": true
+                      },
+                      "timezone": 3600,
+                      "id": 2950159,
+                      "name": "Berlin",
+                      "cod": 200
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenWeatherMap1": [
+          {
+            "hints": [],
+            "startTime": 1738078155836,
+            "executionTime": 243,
+            "source": [
+              {
+                "previousNode": "OpenWeatherMap"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "cod": "200",
+                      "message": 0,
+                      "cnt": 40,
+                      "list": [
+                        "json array"
+                      ],
+                      "city": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "OpenWeatherMap1"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:15.609Z",
+  "stoppedAt": "2025-01-28T15:29:16.080Z",
+  "status": "running",
+  "finished": true
+}

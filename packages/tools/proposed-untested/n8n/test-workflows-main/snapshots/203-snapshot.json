@@ -1,0 +1,318 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078168326,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle": [
+          {
+            "hints": [],
+            "startTime": 1738078168326,
+            "executionTime": 577,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 11452,
+                      "name": "n8n test subscription",
+                      "billing_type": "month",
+                      "billing_period": 3,
+                      "initial_price": {
+                        "object": true
+                      },
+                      "recurring_price": {
+                        "object": true
+                      },
+                      "trial_days": 14
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle2": [
+          {
+            "hints": [],
+            "startTime": 1738078168903,
+            "executionTime": 688,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 11451,
+                      "name": "n8n test for Omar",
+                      "description": "a great n8n test product",
+                      "base_price": {
+                        "object": true
+                      },
+                      "sale_price": {
+                        "object": true
+                      },
+                      "currency": "USD",
+                      "screenshots": [
+                        "json array"
+                      ],
+                      "icon": "https://sandbox-static.paddle.com/assets/images/checkout/default_product_icon.png"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle3": [
+          {
+            "hints": [],
+            "startTime": 1738078169592,
+            "executionTime": 730,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "subscription_id": 101066,
+                      "plan_id": 11452,
+                      "user_id": 3076,
+                      "user_email": "name@example.com",
+                      "marketing_consent": false,
+                      "update_url": "https://sandbox-subscription-management.paddle.com/subscription/101066/hash/250b0346bbd6fb46bebbd6f9c989ffb7333d628b082fe54658658bacf5311bf3/update",
+                      "cancel_url": "https://sandbox-subscription-management.paddle.com/subscription/101066/hash/250b0346bbd6fb46bebbd6f9c989ffb7333d628b082fe54658658bacf5311bf3/cancel",
+                      "state": "paused",
+                      "signup_date": "2021-05-14 08:52:59",
+                      "last_payment": {
+                        "object": true
+                      },
+                      "linked_subscriptions": [
+                        "json array"
+                      ],
+                      "custom_data": {
+                        "object": true
+                      },
+                      "payment_information": {
+                        "object": true
+                      },
+                      "paused_at": "2022-04-08 00:02:35",
+                      "paused_from": "2022-03-24 00:00:00",
+                      "paused_reason": "delinquent"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle4": [
+          {
+            "hints": [],
+            "startTime": 1738078170323,
+            "executionTime": 742,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                []
+              ]
+            }
+          }
+        ],
+        "Paddle1": [
+          {
+            "hints": [],
+            "startTime": 1738078171066,
+            "executionTime": 666,
+            "source": [
+              {
+                "previousNode": "Paddle"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 11452,
+                      "name": "n8n test subscription",
+                      "billing_type": "month",
+                      "billing_period": 3,
+                      "initial_price": {
+                        "object": true
+                      },
+                      "recurring_price": {
+                        "object": true
+                      },
+                      "trial_days": 14
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle5": [
+          {
+            "hints": [],
+            "startTime": 1738078171733,
+            "executionTime": 374,
+            "source": [
+              {
+                "previousNode": "Paddle2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "coupon": "741EFF4E"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle6": [
+          {
+            "hints": [],
+            "startTime": 1738078172107,
+            "executionTime": 727,
+            "source": [
+              {
+                "previousNode": "Paddle5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "updated": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Paddle7": [
+          {
+            "hints": [],
+            "startTime": 1738078172835,
+            "executionTime": 1022,
+            "source": [
+              {
+                "previousNode": "Paddle6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "coupon": "722F58E2",
+                      "description": {
+                        "object": true
+                      },
+                      "discount_type": "flat",
+                      "discount_amount": "5.000000000",
+                      "discount_currency": "USD",
+                      "allowed_uses": 999999,
+                      "times_used": 0,
+                      "is_recurring": false,
+                      "expires": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Paddle7"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:28.324Z",
+  "stoppedAt": "2025-01-28T15:29:33.857Z",
+  "status": "running",
+  "finished": true
+}

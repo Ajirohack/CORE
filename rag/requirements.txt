@@ -1,0 +1,25 @@
+# Core dependencies
+fastapi>=0.95.0,<0.104.0
+uvicorn>=0.22.0,<0.24.0
+gunicorn>=21.0.0,<22.0.0
+pydantic>=2.0.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+pyyaml>=6.0.0,<7.0.0
+httpx>=0.23.0,<0.25.0
+
+# Database connectors
+qdrant-client>=1.1.0
+psycopg2-binary>=2.9.0,<3.0.0
+neo4j>=5.9.0,<6.0.0
+redis>=4.5.0,<5.0.0
+
+# RAG and NLP
+sentence-transformers>=2.2.0
+openai>=0.27.0
+numpy<2.0.0  # Pin NumPy to 1.x to avoid compatibility issues
+spacy>=3.6.0
+torch>=2.0.0
+
+# Monitoring and logging
+prometheus-client>=0.17.0
+python-json-logger>=2.0.0

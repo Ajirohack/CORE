@@ -1,0 +1,1106 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078239775,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack10": [
+          {
+            "hints": [],
+            "startTime": 1738078239775,
+            "executionTime": 1002,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "F08BASBUMLY",
+                      "created": 1738078240,
+                      "timestamp": 1738078240,
+                      "name": "-.txt",
+                      "title": "Untitled",
+                      "mimetype": "text/plain",
+                      "filetype": "text",
+                      "pretty_type": "Plain Text",
+                      "user": "U01NE1E8FFU",
+                      "user_team": "T01MZ82R8NB",
+                      "editable": true,
+                      "size": 83,
+                      "mode": "snippet",
+                      "is_external": false,
+                      "external_type": "",
+                      "is_public": true,
+                      "public_url_shared": false,
+                      "display_as_bot": false,
+                      "username": "",
+                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F08BASBUMLY/-.txt",
+                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F08BASBUMLY/download/-.txt",
+                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F08BASBUMLY/-.txt",
+                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F08BASBUMLY-a55d0eb085",
+                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F08BASBUMLY/-.txt/edit",
+                      "preview": "Test file upload Tue Jan 28 2025 16:30:39 GMT+0100 (Central European Standard Time)",
+                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Tue Jan 28 2025 16:30:39 GMT+0100 (Central European Standard Time)</pre></div>\n</div>\n</div>\n",
+                      "lines": 1,
+                      "lines_more": 0,
+                      "preview_is_truncated": false,
+                      "comments_count": 0,
+                      "is_starred": false,
+                      "shares": {
+                        "object": true
+                      },
+                      "channels": [
+                        "json array"
+                      ],
+                      "groups": [
+                        "json array"
+                      ],
+                      "ims": [
+                        "json array"
+                      ],
+                      "has_more_shares": false,
+                      "has_rich_preview": false,
+                      "file_access": "visible"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack2": [
+          {
+            "hints": [],
+            "startTime": 1738078240778,
+            "executionTime": 965,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "testchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "testchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078241380,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": true,
+                      "last_read": "0000000000.000000",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ],
+                      "priority": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack24": [
+          {
+            "hints": [],
+            "startTime": 1738078241744,
+            "executionTime": 862,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack11": [
+          {
+            "hints": [],
+            "startTime": 1738078242607,
+            "executionTime": 1423,
+            "source": [
+              {
+                "previousNode": "Slack10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "F08AFCE3CMU",
+                      "created": 1738077938,
+                      "timestamp": 1738077938,
+                      "name": "-.txt",
+                      "title": "Untitled",
+                      "mimetype": "text/plain",
+                      "filetype": "text",
+                      "pretty_type": "Plain Text",
+                      "user": "U01NE1E8FFU",
+                      "user_team": "T01MZ82R8NB",
+                      "editable": true,
+                      "size": 79,
+                      "mode": "snippet",
+                      "is_external": false,
+                      "external_type": "",
+                      "is_public": true,
+                      "public_url_shared": false,
+                      "display_as_bot": false,
+                      "username": "",
+                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F08AFCE3CMU/-.txt",
+                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F08AFCE3CMU/download/-.txt",
+                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F08AFCE3CMU/-.txt",
+                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F08AFCE3CMU/-.txt/edit",
+                      "preview": "Test file upload Tue Jan 28 2025 15:25:38 GMT+0000 (Coordinated Universal Time)",
+                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Tue Jan 28 2025 15:25:38 GMT+0000 (Coordinated Universal Time)</pre></div>\n</div>\n</div>\n",
+                      "lines": 1,
+                      "lines_more": 0,
+                      "preview_is_truncated": false,
+                      "channels": [
+                        "json array"
+                      ],
+                      "groups": [
+                        "json array"
+                      ],
+                      "ims": [
+                        "json array"
+                      ],
+                      "comments_count": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack9": [
+          {
+            "hints": [],
+            "startTime": 1738078244030,
+            "executionTime": 597,
+            "source": [
+              {
+                "previousNode": "Slack2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "renamedtestchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078244370,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": true,
+                      "last_read": "0000000000.000000",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack21": [
+          {
+            "hints": [],
+            "startTime": 1738078244627,
+            "executionTime": 353,
+            "source": [
+              {
+                "previousNode": "Slack24"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack12": [
+          {
+            "hints": [],
+            "startTime": 1738078244980,
+            "executionTime": 372,
+            "source": [
+              {
+                "previousNode": "Slack11"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "F08BASBUMLY",
+                      "created": 1738078240,
+                      "timestamp": 1738078240,
+                      "name": "-.txt",
+                      "title": "Untitled",
+                      "mimetype": "text/plain",
+                      "filetype": "text",
+                      "pretty_type": "Plain Text",
+                      "user": "U01NE1E8FFU",
+                      "user_team": "T01MZ82R8NB",
+                      "editable": true,
+                      "size": 83,
+                      "mode": "snippet",
+                      "is_external": false,
+                      "external_type": "",
+                      "is_public": true,
+                      "public_url_shared": false,
+                      "display_as_bot": false,
+                      "username": "",
+                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F08BASBUMLY/-.txt",
+                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F08BASBUMLY/download/-.txt",
+                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F08BASBUMLY/-.txt",
+                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F08BASBUMLY-a55d0eb085",
+                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F08BASBUMLY/-.txt/edit",
+                      "preview": "Test file upload Tue Jan 28 2025 16:30:39 GMT+0100 (Central European Standard Time)",
+                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Tue Jan 28 2025 16:30:39 GMT+0100 (Central European Standard Time)</pre></div>\n</div>\n</div>\n",
+                      "lines": 1,
+                      "lines_more": 0,
+                      "preview_is_truncated": false,
+                      "favorites": [
+                        "json array"
+                      ],
+                      "is_starred": false,
+                      "shares": {
+                        "object": true
+                      },
+                      "channels": [
+                        "json array"
+                      ],
+                      "groups": [
+                        "json array"
+                      ],
+                      "ims": [
+                        "json array"
+                      ],
+                      "has_more_shares": false,
+                      "has_rich_preview": false,
+                      "file_access": "visible",
+                      "comments_count": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack3": [
+          {
+            "hints": [],
+            "startTime": 1738078245353,
+            "executionTime": 400,
+            "source": [
+              {
+                "previousNode": "Slack9"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "renamedtestchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078245623,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": false,
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack22": [
+          {
+            "hints": [],
+            "startTime": 1738078245754,
+            "executionTime": 329,
+            "source": [
+              {
+                "previousNode": "Slack21"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "type": "channel",
+                      "channel": "C01MZ82T9TR",
+                      "date_create": 1738078244
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack4": [
+          {
+            "hints": [],
+            "startTime": 1738078246083,
+            "executionTime": 439,
+            "source": [
+              {
+                "previousNode": "Slack3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "renamedtestchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078246353,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": false,
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack23": [
+          {
+            "hints": [],
+            "startTime": 1738078246522,
+            "executionTime": 410,
+            "source": [
+              {
+                "previousNode": "Slack22"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack5": [
+          {
+            "hints": [],
+            "startTime": 1738078246933,
+            "executionTime": 369,
+            "source": [
+              {
+                "previousNode": "Slack4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "renamedtestchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078246353,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": true,
+                      "last_read": "0000000000.000000",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack13": [
+          {
+            "hints": [],
+            "startTime": 1738078247302,
+            "executionTime": 607,
+            "source": [
+              {
+                "previousNode": "Slack5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "renamedtestchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078246353,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": true,
+                      "last_read": "0000000000.000000",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack17": [
+          {
+            "hints": [],
+            "startTime": 1738078247910,
+            "executionTime": 472,
+            "source": [
+              {
+                "previousNode": "Slack13"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack16": [
+          {
+            "hints": [],
+            "startTime": 1738078248383,
+            "executionTime": 431,
+            "source": [
+              {
+                "previousNode": "Slack17"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C08BASC41J4",
+                      "name": "renamedtestchannelvwciollwn",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1738078241,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelvwciollwn",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1738078246353,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": true,
+                      "last_read": "1738078246.402969",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ],
+                      "priority": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack6": [
+          {
+            "hints": [],
+            "startTime": 1738078248814,
+            "executionTime": 362,
+            "source": [
+              {
+                "previousNode": "Slack16"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C01MZ82T9TR",
+                      "name": "random",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "is_mpim": false,
+                      "is_private": false,
+                      "created": 1613575358,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "random",
+                      "is_shared": false,
+                      "is_org_shared": false,
+                      "is_pending_ext_shared": false,
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "context_team_id": "T01MZ82R8NB",
+                      "updated": 1724374018713,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_member": true,
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "properties": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ],
+                      "num_members": 2
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack7": [
+          {
+            "hints": [],
+            "startTime": 1738078249177,
+            "executionTime": 364,
+            "source": [
+              {
+                "previousNode": "Slack6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "subtype": "channel_join",
+                      "user": "U01NE1E8FFU",
+                      "text": "<@U01NE1E8FFU> has joined the channel",
+                      "type": "message",
+                      "ts": "1738078248.705559"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack18": [
+          {
+            "hints": [],
+            "startTime": 1738078249541,
+            "executionTime": 381,
+            "source": [
+              {
+                "previousNode": "Slack7"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "subtype": "channel_join",
+                      "user": "U01NE1E8FFU",
+                      "text": "<@U01NE1E8FFU> has joined the channel",
+                      "type": "message",
+                      "ts": "1738078248.705559"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack8": [
+          {
+            "hints": [],
+            "startTime": 1738078249923,
+            "executionTime": 364,
+            "source": [
+              {
+                "previousNode": "Slack18"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "member": "U01N08LEY9M"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack": [
+          {
+            "hints": [],
+            "startTime": 1738078250287,
+            "executionTime": 491,
+            "source": [
+              {
+                "previousNode": "Slack8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack14": [
+          {
+            "hints": [],
+            "startTime": 1738078250779,
+            "executionTime": 580,
+            "source": [
+              {
+                "previousNode": "Slack"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack1": [
+          {
+            "hints": [],
+            "startTime": 1738078251360,
+            "executionTime": 691,
+            "source": [
+              {
+                "previousNode": "Slack14"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Slack1"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:30:39.771Z",
+  "stoppedAt": "2025-01-28T15:30:52.051Z",
+  "status": "running",
+  "finished": true
+}

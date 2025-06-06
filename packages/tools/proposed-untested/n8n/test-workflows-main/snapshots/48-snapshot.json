@@ -1,0 +1,1022 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078252027,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana2": [
+          {
+            "hints": [],
+            "startTime": 1738078252027,
+            "executionTime": 1222,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1209263578384380",
+                      "projects": [
+                        "json array"
+                      ],
+                      "memberships": [
+                        "json array"
+                      ],
+                      "resource_type": "task",
+                      "created_at": "2025-01-28T15:30:52.478Z",
+                      "modified_at": "2025-01-28T15:30:52.864Z",
+                      "name": "TaskTest",
+                      "notes": "",
+                      "actual_time_minutes": 0,
+                      "tags": [
+                        "json array"
+                      ],
+                      "start_at": {
+                        "object": true
+                      },
+                      "start_on": {
+                        "object": true
+                      },
+                      "resource_subtype": "default_task",
+                      "due_at": {
+                        "object": true
+                      },
+                      "due_on": {
+                        "object": true
+                      },
+                      "completed_at": {
+                        "object": true
+                      },
+                      "assignee_status": "inbox",
+                      "completed": false,
+                      "num_hearts": 0,
+                      "num_likes": 0,
+                      "workspace": {
+                        "object": true
+                      },
+                      "assignee_section": {
+                        "object": true
+                      },
+                      "parent": {
+                        "object": true
+                      },
+                      "liked": false,
+                      "hearted": false,
+                      "hearts": [
+                        "json array"
+                      ],
+                      "likes": [
+                        "json array"
+                      ],
+                      "permalink_url": "https://app.asana.com/0/1199961131280920/1209263578384380",
+                      "assignee": {
+                        "object": true
+                      },
+                      "followers": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana14": [
+          {
+            "hints": [],
+            "startTime": 1738078253250,
+            "executionTime": 597,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1199961026001666",
+                      "email": "nodeqa@n8n.io",
+                      "name": "nodeqa",
+                      "photo": {
+                        "object": true
+                      },
+                      "resource_type": "user",
+                      "workspaces": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana": [
+          {
+            "hints": [],
+            "startTime": 1738078253848,
+            "executionTime": 414,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1199961131378839",
+                      "name": "QAtest",
+                      "resource_type": "project"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana3": [
+          {
+            "hints": [],
+            "startTime": 1738078254262,
+            "executionTime": 782,
+            "source": [
+              {
+                "previousNode": "Asana2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1209263578384380",
+                      "projects": [
+                        "json array"
+                      ],
+                      "memberships": [
+                        "json array"
+                      ],
+                      "resource_type": "task",
+                      "created_at": "2025-01-28T15:30:52.478Z",
+                      "modified_at": "2025-01-28T15:30:54.771Z",
+                      "name": "UpdatedTestTask",
+                      "notes": "",
+                      "workspace": {
+                        "object": true
+                      },
+                      "tags": [
+                        "json array"
+                      ],
+                      "start_at": {
+                        "object": true
+                      },
+                      "start_on": {
+                        "object": true
+                      },
+                      "resource_subtype": "default_task",
+                      "due_at": {
+                        "object": true
+                      },
+                      "due_on": {
+                        "object": true
+                      },
+                      "completed_at": {
+                        "object": true
+                      },
+                      "assignee_status": "inbox",
+                      "completed": false,
+                      "actual_time_minutes": 0,
+                      "num_hearts": 0,
+                      "num_likes": 0,
+                      "parent": {
+                        "object": true
+                      },
+                      "hearted": false,
+                      "liked": false,
+                      "hearts": [
+                        "json array"
+                      ],
+                      "likes": [
+                        "json array"
+                      ],
+                      "permalink_url": "https://app.asana.com/0/1199961131280920/1209263578384380",
+                      "assignee": {
+                        "object": true
+                      },
+                      "followers": [
+                        "json array"
+                      ],
+                      "assignee_section": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana15": [
+          {
+            "hints": [],
+            "startTime": 1738078255045,
+            "executionTime": 556,
+            "source": [
+              {
+                "previousNode": "Asana14"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1202187737680529",
+                      "name": "Adriana Toader",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1202890883228546",
+                      "name": "Ardit Fetahu",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1206933450858036",
+                      "name": "Aya",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1201317194658352",
+                      "name": "Dale Player",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1209089579490684",
+                      "name": "David Arens",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1183698132267547",
+                      "name": "Inte Gration",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1202307247988024",
+                      "name": "ivan",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1206344448463309",
+                      "name": "ivan@n8n.io",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1198750619112603",
+                      "name": "Jan Oberhauser",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1202718728322685",
+                      "name": "John",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1207168924369543",
+                      "name": "luis@n8n.io",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1202718619090236",
+                      "name": "Mary",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1199961026001666",
+                      "name": "nodeqa",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1177656661193880",
+                      "name": "Ronalds Upenieks",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1177253503277681",
+                      "name": "Tanay Pant",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1204568752114666",
+                      "name": "Thomas Support",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "gid": "1202404236960393",
+                      "name": "Tom",
+                      "resource_type": "user"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana1": [
+          {
+            "hints": [],
+            "startTime": 1738078255602,
+            "executionTime": 510,
+            "source": [
+              {
+                "previousNode": "Asana"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1199961131378839",
+                      "archived": false,
+                      "color": {
+                        "object": true
+                      },
+                      "completed": false,
+                      "completed_at": {
+                        "object": true
+                      },
+                      "created_at": "2021-02-19T14:12:58.357Z",
+                      "current_status": {
+                        "object": true
+                      },
+                      "current_status_update": {
+                        "object": true
+                      },
+                      "custom_fields": [
+                        "json array"
+                      ],
+                      "default_access_level": "editor",
+                      "default_view": "list",
+                      "due_on": {
+                        "object": true
+                      },
+                      "due_date": {
+                        "object": true
+                      },
+                      "followers": [
+                        "json array"
+                      ],
+                      "members": [
+                        "json array"
+                      ],
+                      "minimum_access_level_for_customization": "editor",
+                      "minimum_access_level_for_sharing": "editor",
+                      "modified_at": "2025-01-24T13:20:37.636Z",
+                      "name": "QAtest",
+                      "notes": "",
+                      "owner": {
+                        "object": true
+                      },
+                      "permalink_url": "https://app.asana.com/0/1199961131378839/1199961131378839",
+                      "privacy_setting": "private",
+                      "public": false,
+                      "resource_type": "project",
+                      "start_on": {
+                        "object": true
+                      },
+                      "team": {
+                        "object": true
+                      },
+                      "workspace": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana4": [
+          {
+            "hints": [],
+            "startTime": 1738078256112,
+            "executionTime": 1222,
+            "source": [
+              {
+                "previousNode": "Asana3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana5": [
+          {
+            "hints": [],
+            "startTime": 1738078257335,
+            "executionTime": 492,
+            "source": [
+              {
+                "previousNode": "Asana4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1199961131378855",
+                      "name": "✏️ Finish setting up your first project",
+                      "resource_type": "task",
+                      "resource_subtype": "default_task"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana6": [
+          {
+            "hints": [],
+            "startTime": 1738078257827,
+            "executionTime": 386,
+            "source": [
+              {
+                "previousNode": "Asana5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1209263578384380",
+                      "actual_time_minutes": {
+                        "object": true
+                      },
+                      "assignee": {
+                        "object": true
+                      },
+                      "assignee_status": "inbox",
+                      "assignee_section": {
+                        "object": true
+                      },
+                      "completed": false,
+                      "completed_at": {
+                        "object": true
+                      },
+                      "created_at": "2025-01-28T15:30:52.478Z",
+                      "due_at": {
+                        "object": true
+                      },
+                      "due_on": {
+                        "object": true
+                      },
+                      "followers": [
+                        "json array"
+                      ],
+                      "hearted": false,
+                      "hearts": [
+                        "json array"
+                      ],
+                      "liked": false,
+                      "likes": [
+                        "json array"
+                      ],
+                      "memberships": [
+                        "json array"
+                      ],
+                      "modified_at": "2025-01-28T15:30:56.787Z",
+                      "name": "UpdatedTestTask",
+                      "notes": "",
+                      "num_hearts": 0,
+                      "num_likes": 0,
+                      "parent": {
+                        "object": true
+                      },
+                      "permalink_url": "https://app.asana.com/0/1199961131378839/1209263578384380",
+                      "projects": [
+                        "json array"
+                      ],
+                      "resource_type": "task",
+                      "start_at": {
+                        "object": true
+                      },
+                      "start_on": {
+                        "object": true
+                      },
+                      "tags": [
+                        "json array"
+                      ],
+                      "resource_subtype": "default_task",
+                      "workspace": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana8": [
+          {
+            "hints": [],
+            "startTime": 1738078258214,
+            "executionTime": 880,
+            "source": [
+              {
+                "previousNode": "Asana6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1209263536839591",
+                      "resource_type": "story",
+                      "created_at": "2025-01-28T15:30:58.642Z",
+                      "num_likes": 0,
+                      "num_hearts": 0,
+                      "resource_subtype": "comment_added",
+                      "is_edited": false,
+                      "text": "TestTaskComment",
+                      "type": "comment",
+                      "is_pinned": false,
+                      "source": "api",
+                      "hearts": [
+                        "json array"
+                      ],
+                      "likes": [
+                        "json array"
+                      ],
+                      "hearted": false,
+                      "liked": false,
+                      "previews": [
+                        "json array"
+                      ],
+                      "is_editable": true,
+                      "created_by": {
+                        "object": true
+                      },
+                      "target": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana10": [
+          {
+            "hints": [],
+            "startTime": 1738078259095,
+            "executionTime": 1448,
+            "source": [
+              {
+                "previousNode": "Asana6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana12": [
+          {
+            "hints": [],
+            "startTime": 1738078260543,
+            "executionTime": 1382,
+            "source": [
+              {
+                "previousNode": "Asana6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana16": [
+          {
+            "hints": [],
+            "startTime": 1738078261926,
+            "executionTime": 1634,
+            "source": [
+              {
+                "previousNode": "Asana6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1209263641285002",
+                      "projects": [
+                        "json array"
+                      ],
+                      "memberships": [
+                        "json array"
+                      ],
+                      "resource_type": "task",
+                      "created_at": "2025-01-28T15:31:02.853Z",
+                      "modified_at": "2025-01-28T15:31:03.141Z",
+                      "name": "SubTestTask",
+                      "notes": "",
+                      "assignee": {
+                        "object": true
+                      },
+                      "start_at": {
+                        "object": true
+                      },
+                      "start_on": {
+                        "object": true
+                      },
+                      "resource_subtype": "default_task",
+                      "due_at": {
+                        "object": true
+                      },
+                      "due_on": {
+                        "object": true
+                      },
+                      "completed_at": {
+                        "object": true
+                      },
+                      "assignee_status": "upcoming",
+                      "completed": false,
+                      "actual_time_minutes": 0,
+                      "tags": [
+                        "json array"
+                      ],
+                      "workspace": {
+                        "object": true
+                      },
+                      "num_hearts": 0,
+                      "num_likes": 0,
+                      "hearted": false,
+                      "liked": false,
+                      "hearts": [
+                        "json array"
+                      ],
+                      "likes": [
+                        "json array"
+                      ],
+                      "parent": {
+                        "object": true
+                      },
+                      "permalink_url": "https://app.asana.com/0/1199961131378839/1209263641285002",
+                      "followers": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana9": [
+          {
+            "hints": [],
+            "startTime": 1738078263560,
+            "executionTime": 1459,
+            "source": [
+              {
+                "previousNode": "Asana8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana11": [
+          {
+            "hints": [],
+            "startTime": 1738078265020,
+            "executionTime": 1555,
+            "source": [
+              {
+                "previousNode": "Asana10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana13": [
+          {
+            "hints": [],
+            "startTime": 1738078266575,
+            "executionTime": 1455,
+            "source": [
+              {
+                "previousNode": "Asana12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana17": [
+          {
+            "hints": [],
+            "startTime": 1738078268031,
+            "executionTime": 456,
+            "source": [
+              {
+                "previousNode": "Asana16"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "gid": "1209263641285002",
+                      "name": "SubTestTask",
+                      "resource_type": "task",
+                      "resource_subtype": "default_task"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Asana7": [
+          {
+            "hints": [],
+            "startTime": 1738078268488,
+            "executionTime": 730,
+            "source": [
+              {
+                "previousNode": "Asana17"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Asana7"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:30:52.024Z",
+  "stoppedAt": "2025-01-28T15:31:09.219Z",
+  "status": "running",
+  "finished": true
+}

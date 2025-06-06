@@ -1,0 +1,20 @@
+prod_mode: False
+
+llm: 
+    "api": "sncloud" #  Set either `sambastudio` or `sncloud`
+    "temperature": 0.0
+    "do_sample": False
+    "max_tokens_to_generate": 1024
+    "bundle": True # Set as true if using a Bundle endpoint
+    "select_expert": "Meta-Llama-3.1-70B-Instruct"
+
+
+rag:
+  embedding_model: 
+    "type": "cpu" # Either "sambastudio" or "cpu"
+    "batch_size": 1
+    "bundle": True
+    "select_expert": "e5-mistral-7B-instruct" # Set if using "sambastudio" Bundle embedding expert
+  retrieval:
+    "k_retrieved_documents": 5
+

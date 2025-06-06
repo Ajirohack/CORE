@@ -1,0 +1,152 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Test workflow\"": [
+          {
+            "hints": [],
+            "startTime": 1738078194608,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Azure OpenAI Chat Model": [
+          {
+            "startTime": 1738078194619,
+            "executionTime": 1440,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "Human: How much is 1+1? Only provide the numerical answer without any other text.\n"
+                      ],
+                      "estimatedTokens": 20,
+                      "options": {
+                        "azure_openai_api_deployment_name": "gpt4",
+                        "azure_openai_api_instance_name": "n8n-ai-us",
+                        "azure_openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "AZURE_OPENAI_API_KEY"
+                          ]
+                        },
+                        "azure_openai_api_version": "2023-07-01-preview",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "model_kwargs": {},
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Azure OpenAI Chat Model",
+                  "runIndex": 0
+                }
+              ]
+            }
+          }
+        ],
+        "Azure OpenAI Chat": [
+          {
+            "hints": [],
+            "startTime": 1738078194608,
+            "executionTime": 1452,
+            "source": [
+              {
+                "previousNode": "When clicking \"Test workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "text": "2"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Azure OpenAI Chat"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {
+        "Azure OpenAI Chat Model": [
+          {
+            "subRun": [
+              {
+                "node": "Azure OpenAI Chat Model",
+                "runIndex": 0
+              }
+            ]
+          }
+        ]
+      },
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:54.607Z",
+  "stoppedAt": "2025-01-28T15:29:56.060Z",
+  "status": "running",
+  "finished": true
+}

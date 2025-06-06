@@ -1,0 +1,163 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078236609,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Drift ": [
+          {
+            "hints": [],
+            "startTime": 1738078236609,
+            "executionTime": 1028,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 24238859918,
+                      "createdAt": 1738078237394,
+                      "attributes": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Drift 1": [
+          {
+            "hints": [],
+            "startTime": 1738078237638,
+            "executionTime": 764,
+            "source": [
+              {
+                "previousNode": "Drift "
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 24238859918,
+                      "createdAt": 1738078237394,
+                      "attributes": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Drift 2": [
+          {
+            "hints": [],
+            "startTime": 1738078238403,
+            "executionTime": 667,
+            "source": [
+              {
+                "previousNode": "Drift 1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 24238859918,
+                      "createdAt": 1738078237394,
+                      "attributes": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Drift 3": [
+          {
+            "hints": [],
+            "startTime": 1738078239071,
+            "executionTime": 670,
+            "source": [
+              {
+                "previousNode": "Drift 2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Drift 3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:30:36.608Z",
+  "stoppedAt": "2025-01-28T15:30:39.741Z",
+  "status": "running",
+  "finished": true
+}

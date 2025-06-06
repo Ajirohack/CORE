@@ -1,0 +1,103 @@
+# Superior RAG System Default Configuration
+
+# API settings
+api:
+  host: 0.0.0.0
+  port: 8000
+  cors_allowed_origins: "*"
+
+# Authentication settings
+auth:
+  require_api_key: true
+  jwt_secret: "${AUTH_SECRET_KEY}"
+  jwt_algorithm: "HS256"
+  jwt_expiry_minutes: 60
+
+# Vector database settings
+vector_db:
+  host: "${QDRANT_HOST}"
+  port: "${QDRANT_PORT}"
+  collection_name: "document_embeddings"
+  vector_size: 1536 # OpenAI embedding dimension
+
+# Relational database settings
+relational_db:
+  host: "${POSTGRES_HOST}"
+  port: "${POSTGRES_PORT}"
+  user: "${POSTGRES_USER}"
+  password: "${POSTGRES_PASSWORD}"
+  database: "${POSTGRES_DB}"
+  min_connections: 5
+  max_connections: 20
+
+# Graph database settings
+graph_db:
+  uri: "${NEO4J_URI}"
+  user: "${NEO4J_USER}"
+  password: "${NEO4J_PASSWORD}"
+
+# Cache settings
+cache:
+  host: "${REDIS_HOST}"
+  port: "${REDIS_PORT}"
+  working_memory_ttl: 600 # 10 minutes
+  short_term_memory_ttl_days: 7 # 7 days
+
+# LLM settings
+llm:
+  provider: "${LLM_PROVIDER}" # openai, anthropic, huggingface, local
+  model: "${LLM_MODEL}" # gpt-4, claude-2, llama-2-70b, etc.
+  api_key: "${LLM_API_KEY}"
+  temperature: 0.0 # For deterministic outputs
+  max_tokens: 1024
+  timeout_seconds: 30
+
+# Embedding settings
+embedding:
+  model: "${EMBEDDING_MODEL}" # BAAI/bge-large-en-v1.5
+  batch_size: 8
+  device: "cpu" # or "cuda" for GPU support
+
+# Document processing settings
+document_processing:
+  chunk_size: 1000
+  chunk_overlap: 200
+  max_document_size_mb: 10
+  supported_extensions:
+    - ".txt"
+    - ".pdf"
+    - ".docx"
+    - ".html"
+    - ".md"
+    - ".csv"
+    - ".json"
+
+# Retrieval settings
+retrieval:
+  default_top_k: 5
+  min_score_threshold: 0.7
+  fusion:
+    enabled: true
+    methods:
+      - method: "vector"
+        weight: 0.6
+      - method: "keyword"
+        weight: 0.2
+      - method: "graph"
+        weight: 0.2
+  enable_query_transformation: true
+  enable_reflection: true
+  reflection_threshold: 0.4
+
+# Memory settings
+memory:
+  working_memory_limit: 10 # Number of items to keep in working memory
+  use_short_term_memory: true
+  use_long_term_memory: true
+
+# Logging settings
+logging:
+  level: "${LOG_LEVEL}"
+  file: "${LOG_FILE}"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"

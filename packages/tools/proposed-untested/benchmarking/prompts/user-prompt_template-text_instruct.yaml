@@ -1,0 +1,18 @@
+_type: prompt
+input_types: {}
+input_variables: []
+metadata: null
+name: null
+optional_variables: []
+output_parser: null
+partial_variables: {}
+tags: null
+template: |
+  Write a detailed, in-depth guide on the evolution of deep learning.Cover 
+  the historical milestones, key breakthroughs, architectures (such as CNNs, 
+  RNNs, and Transformers), training methodologies, hardware advancements, 
+  ethical concerns, and future trends. Include real-world applications, 
+  case studies, and a comparison of deep learning with traditional machine 
+  learning. Provide citations and technical explanations where necessary.
+template_format: f-string
+validate_template: false

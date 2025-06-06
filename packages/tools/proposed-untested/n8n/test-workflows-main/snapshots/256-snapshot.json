@@ -1,0 +1,509 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking ‘Test workflow’": [
+          {
+            "hints": [],
+            "startTime": 1738078235146,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenAI Chat Model": [
+          {
+            "startTime": 1738078235159,
+            "executionTime": 1259,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "System: You are a helpful assistant\nHuman: What happened yesterday?"
+                      ],
+                      "estimatedTokens": 14,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-mini",
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 0
+                },
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 1
+                }
+              ]
+            }
+          },
+          {
+            "startTime": 1738078237257,
+            "executionTime": 1221,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "System: You are a helpful assistant\nHuman: What happened yesterday?\nAI: \nTool: "
+                      ],
+                      "estimatedTokens": 20,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-mini",
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Vector Store Tool": [
+          {
+            "startTime": 1738078236419,
+            "executionTime": 836,
+            "executionStatus": "error",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "query": "What happened on October 3, 2023?"
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "query": "What happened on October 3, 2023?"
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Vector Store Tool",
+                  "runIndex": 0
+                }
+              ]
+            },
+            "error": {
+              "message": "The resource you are requesting could not be found",
+              "timestamp": 1738078237255,
+              "name": "NodeOperationError",
+              "description": "The resource you are requesting could not be found",
+              "context": {},
+              "cause": {
+                "message": "The resource you are requesting could not be found",
+                "timestamp": 1738078237253,
+                "name": "NodeApiError",
+                "description": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
+                "context": {},
+                "cause": {
+                  "status": 404,
+                  "headers": {
+                    "alt-svc": "h3=\":443\"; ma=86400",
+                    "cf-cache-status": "DYNAMIC",
+                    "cf-ray": "909206553c46e52b-TXL",
+                    "connection": "keep-alive",
+                    "content-encoding": "gzip",
+                    "content-type": "application/json; charset=utf-8",
+                    "date": "Tue, 28 Jan 2025 15:30:37 GMT",
+                    "server": "cloudflare",
+                    "set-cookie": "__cf_bm=W8yHdKBFRf6Q8z_wupo2uqL4LSIi.x2kSEjw4FztkpA-1738078237-1.0.1.1-QiNWavyYFeGDNquf9O9qWInUl8Pqg5.tyItPP4ZNAoMS0lc.uy.65Xdqt7oA_0o_M3jqEsTBQuA4bAfGOkLIQA; path=/; expires=Tue, 28-Jan-25 16:00:37 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=xg6vahVJiRMotMRF6D.8GZjlc9GKLSCZBa0j5fjJYss-1738078237155-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+                    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                    "transfer-encoding": "chunked",
+                    "vary": "Origin",
+                    "x-content-type-options": "nosniff",
+                    "x-request-id": "req_cbfa7f7cb485890d67e381b61022220c"
+                  },
+                  "request_id": "req_cbfa7f7cb485890d67e381b61022220c",
+                  "error": {
+                    "message": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
+                    "type": "invalid_request_error",
+                    "param": null,
+                    "code": "model_not_found"
+                  },
+                  "code": "model_not_found",
+                  "param": null,
+                  "type": "invalid_request_error",
+                  "lc_error_code": "MODEL_NOT_FOUND",
+                  "attemptNumber": 1,
+                  "retriesLeft": 2
+                }
+              }
+            }
+          }
+        ],
+        "In-Memory Vector Store": [
+          {
+            "startTime": 1738078236420,
+            "executionTime": 546,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_vectorStore": [
+                [
+                  {
+                    "json": {
+                      "response": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_vectorStore": [
+                [
+                  {
+                    "json": {
+                      "query": "What happened on October 3, 2023?",
+                      "k": 4
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "In-Memory Vector Store",
+                  "runIndex": 0
+                }
+              ]
+            }
+          }
+        ],
+        "Embeddings OpenAI": [
+          {
+            "startTime": 1738078236420,
+            "executionTime": 546,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_embedding": [
+                [
+                  {
+                    "json": {
+                      "response": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_embedding": [
+                [
+                  {
+                    "json": {
+                      "query": "What happened on October 3, 2023?"
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Embeddings OpenAI",
+                  "runIndex": 0
+                }
+              ]
+            }
+          }
+        ],
+        "OpenAI Chat Model1": [
+          {
+            "startTime": 1738078236967,
+            "executionTime": 287,
+            "executionStatus": "error",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "json array"
+                      ],
+                      "estimatedTokens": 52,
+                      "options": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "json array"
+                      ],
+                      "estimatedTokens": 52,
+                      "options": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model1",
+                  "runIndex": 0
+                }
+              ]
+            },
+            "error": {
+              "message": "The resource you are requesting could not be found",
+              "timestamp": 1738078237253,
+              "name": "NodeApiError",
+              "description": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
+              "context": {},
+              "cause": {
+                "status": 404,
+                "headers": {
+                  "alt-svc": "h3=\":443\"; ma=86400",
+                  "cf-cache-status": "DYNAMIC",
+                  "cf-ray": "909206553c46e52b-TXL",
+                  "connection": "keep-alive",
+                  "content-encoding": "gzip",
+                  "content-type": "application/json; charset=utf-8",
+                  "date": "Tue, 28 Jan 2025 15:30:37 GMT",
+                  "server": "cloudflare",
+                  "set-cookie": "__cf_bm=W8yHdKBFRf6Q8z_wupo2uqL4LSIi.x2kSEjw4FztkpA-1738078237-1.0.1.1-QiNWavyYFeGDNquf9O9qWInUl8Pqg5.tyItPP4ZNAoMS0lc.uy.65Xdqt7oA_0o_M3jqEsTBQuA4bAfGOkLIQA; path=/; expires=Tue, 28-Jan-25 16:00:37 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=xg6vahVJiRMotMRF6D.8GZjlc9GKLSCZBa0j5fjJYss-1738078237155-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+                  "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                  "transfer-encoding": "chunked",
+                  "vary": "Origin",
+                  "x-content-type-options": "nosniff",
+                  "x-request-id": "req_cbfa7f7cb485890d67e381b61022220c"
+                },
+                "request_id": "req_cbfa7f7cb485890d67e381b61022220c",
+                "error": {
+                  "message": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
+                  "type": "invalid_request_error",
+                  "param": null,
+                  "code": "model_not_found"
+                },
+                "code": "model_not_found",
+                "param": null,
+                "type": "invalid_request_error",
+                "lc_error_code": "MODEL_NOT_FOUND",
+                "attemptNumber": 1,
+                "retriesLeft": 2
+              }
+            }
+          }
+        ],
+        "AI Agent": [
+          {
+            "hints": [],
+            "startTime": 1738078235147,
+            "executionTime": 3333,
+            "source": [
+              {
+                "previousNode": "When clicking ‘Test workflow’"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "output": "It appears that I don't have specific information about events from yesterday, October 3, 2023. However, I can help you with more general inquiries or assist you with something else!"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AI Agent"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {
+        "OpenAI Chat Model": [
+          {
+            "subRun": [
+              {
+                "node": "OpenAI Chat Model",
+                "runIndex": 0
+              },
+              {
+                "node": "OpenAI Chat Model",
+                "runIndex": 1
+              }
+            ]
+          }
+        ],
+        "Embeddings OpenAI": [
+          {
+            "subRun": [
+              {
+                "node": "Embeddings OpenAI",
+                "runIndex": 0
+              }
+            ]
+          }
+        ],
+        "In-Memory Vector Store": [
+          {
+            "subRun": [
+              {
+                "node": "In-Memory Vector Store",
+                "runIndex": 0
+              }
+            ]
+          }
+        ],
+        "OpenAI Chat Model1": [
+          {
+            "subRun": [
+              {
+                "node": "OpenAI Chat Model1",
+                "runIndex": 0
+              }
+            ]
+          }
+        ],
+        "Vector Store Tool": [
+          {
+            "subRun": [
+              {
+                "node": "Vector Store Tool",
+                "runIndex": 0
+              }
+            ]
+          }
+        ]
+      },
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:30:35.146Z",
+  "stoppedAt": "2025-01-28T15:30:38.480Z",
+  "status": "running",
+  "finished": true
+}

@@ -1,0 +1,513 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078173927,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Delete existing dir": [
+          {
+            "hints": [],
+            "startTime": 1738078173927,
+            "executionTime": 10,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "exitCode": 0,
+                      "stderr": "",
+                      "stdout": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git": [
+          {
+            "hints": [],
+            "startTime": 1738078173937,
+            "executionTime": 1394,
+            "source": [
+              {
+                "previousNode": "Delete existing dir"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git1": [
+          {
+            "hints": [],
+            "startTime": 1738078175331,
+            "executionTime": 12,
+            "source": [
+              {
+                "previousNode": "Git"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "_file": ".git/config"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git2": [
+          {
+            "hints": [],
+            "startTime": 1738078175343,
+            "executionTime": 59,
+            "source": [
+              {
+                "previousNode": "Git1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git7": [
+          {
+            "hints": [],
+            "startTime": 1738078175402,
+            "executionTime": 59,
+            "source": [
+              {
+                "previousNode": "Git2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Add file to dir": [
+          {
+            "hints": [],
+            "startTime": 1738078175461,
+            "executionTime": 14,
+            "source": [
+              {
+                "previousNode": "Git7"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "exitCode": 0,
+                      "stderr": "",
+                      "stdout": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git3": [
+          {
+            "hints": [],
+            "startTime": 1738078175475,
+            "executionTime": 60,
+            "source": [
+              {
+                "previousNode": "Add file to dir"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git4": [
+          {
+            "hints": [],
+            "startTime": 1738078175536,
+            "executionTime": 14,
+            "source": [
+              {
+                "previousNode": "Git3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "not_added": [
+                        "json array"
+                      ],
+                      "conflicted": [
+                        "json array"
+                      ],
+                      "created": [
+                        "json array"
+                      ],
+                      "deleted": [
+                        "json array"
+                      ],
+                      "modified": [
+                        "json array"
+                      ],
+                      "renamed": [
+                        "json array"
+                      ],
+                      "files": [
+                        "json array"
+                      ],
+                      "staged": [
+                        "json array"
+                      ],
+                      "ahead": 0,
+                      "behind": 0,
+                      "current": "main",
+                      "tracking": "origin/main",
+                      "detached": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git5": [
+          {
+            "hints": [],
+            "startTime": 1738078175551,
+            "executionTime": 23,
+            "source": [
+              {
+                "previousNode": "Git4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git6": [
+          {
+            "hints": [],
+            "startTime": 1738078175574,
+            "executionTime": 16,
+            "source": [
+              {
+                "previousNode": "Git5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "hash": "d69e23c05017a3707c481bb81d54eb19903d1b59",
+                      "date": "2025-01-28T16:29:35+01:00",
+                      "message": "GitNode commit Tue, 28 Jan 2025 15:29:35 GMT",
+                      "refs": "HEAD -> main",
+                      "body": "",
+                      "author_name": "nodemationqa",
+                      "author_email": "nodeqa@n8n.io"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git8": [
+          {
+            "hints": [],
+            "startTime": 1738078175590,
+            "executionTime": 69,
+            "source": [
+              {
+                "previousNode": "Git6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git9": [
+          {
+            "hints": [],
+            "startTime": 1738078175659,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Git8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git10": [
+          {
+            "hints": [],
+            "startTime": 1738078175659,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Git9"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git11": [
+          {
+            "hints": [],
+            "startTime": 1738078175660,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Git10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git12": [
+          {
+            "hints": [],
+            "startTime": 1738078175660,
+            "executionTime": 612,
+            "source": [
+              {
+                "previousNode": "Git11"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Git13": [
+          {
+            "hints": [],
+            "startTime": 1738078176272,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Git12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Git13"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:33.926Z",
+  "stoppedAt": "2025-01-28T15:29:36.273Z",
+  "status": "running",
+  "finished": true
+}

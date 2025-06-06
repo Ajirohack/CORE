@@ -1,0 +1,782 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078269303,
+            "executionTime": 1,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify": [
+          {
+            "hints": [],
+            "startTime": 1738078269304,
+            "executionTime": 1138,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "external_urls": {
+                        "object": true
+                      },
+                      "followers": {
+                        "object": true
+                      },
+                      "genres": [
+                        "json array"
+                      ],
+                      "href": "https://api.spotify.com/v1/artists/0dwFxqYkvZLSA6U6XfQcDV",
+                      "id": "0dwFxqYkvZLSA6U6XfQcDV",
+                      "images": [
+                        "json array"
+                      ],
+                      "name": "Fairuz",
+                      "popularity": 62,
+                      "type": "artist",
+                      "uri": "spotify:artist:0dwFxqYkvZLSA6U6XfQcDV"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify8": [
+          {
+            "hints": [],
+            "startTime": 1738078270442,
+            "executionTime": 417,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "collaborative": false,
+                      "description": "null",
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/playlists/2m050JGz8huD60KtVsdGdO",
+                      "id": "2m050JGz8huD60KtVsdGdO",
+                      "images": {
+                        "object": true
+                      },
+                      "name": "Playlist1738077949915",
+                      "owner": {
+                        "object": true
+                      },
+                      "primary_color": {
+                        "object": true
+                      },
+                      "public": true,
+                      "snapshot_id": "AAAAAebGm4/q1Hne6z82GJgEbUleXVng",
+                      "tracks": {
+                        "object": true
+                      },
+                      "type": "playlist",
+                      "uri": "spotify:playlist:2m050JGz8huD60KtVsdGdO"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify14": [
+          {
+            "hints": [],
+            "startTime": 1738078270859,
+            "executionTime": 782,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                []
+              ]
+            }
+          }
+        ],
+        "Spotify17": [
+          {
+            "hints": [],
+            "startTime": 1738078271641,
+            "executionTime": 613,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "added_at": "2021-03-09T20:01:56Z",
+                      "track": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify1": [
+          {
+            "hints": [],
+            "startTime": 1738078272255,
+            "executionTime": 422,
+            "source": [
+              {
+                "previousNode": "Spotify"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "album_type": "album",
+                      "total_tracks": 9,
+                      "available_markets": [
+                        "json array"
+                      ],
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/albums/5ZJnifXQ8ovGURQY7XhgCG",
+                      "id": "5ZJnifXQ8ovGURQY7XhgCG",
+                      "images": [
+                        "json array"
+                      ],
+                      "name": "Fauroziat فيروزيات (Instrumental)",
+                      "release_date": "2024-12-21",
+                      "release_date_precision": "day",
+                      "type": "album",
+                      "uri": "spotify:album:5ZJnifXQ8ovGURQY7XhgCG",
+                      "artists": [
+                        "json array"
+                      ],
+                      "album_group": "album"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify3": [
+          {
+            "hints": [],
+            "startTime": 1738078272678,
+            "executionTime": 359,
+            "source": [
+              {
+                "previousNode": "Spotify"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "album": {
+                        "object": true
+                      },
+                      "artists": [
+                        "json array"
+                      ],
+                      "available_markets": [
+                        "json array"
+                      ],
+                      "disc_number": 1,
+                      "duration_ms": 212924,
+                      "explicit": false,
+                      "external_ids": {
+                        "object": true
+                      },
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/tracks/2ea6bt302Bq8Hiulp8Bn2C",
+                      "id": "2ea6bt302Bq8Hiulp8Bn2C",
+                      "is_local": false,
+                      "is_playable": true,
+                      "name": "Saalouny El Nas",
+                      "popularity": 57,
+                      "preview_url": "https://p.scdn.co/mp3-preview/d5c0994a3bb204dc66d13c2c46dc866e66a86a1d?cid=d6fc82a01ffb43538b33c4003257c758",
+                      "track_number": 8,
+                      "type": "track",
+                      "uri": "spotify:track:2ea6bt302Bq8Hiulp8Bn2C"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify2": [
+          {
+            "hints": [],
+            "startTime": 1738078273037,
+            "executionTime": 300,
+            "source": [
+              {
+                "previousNode": "Spotify"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "external_urls": {
+                        "object": true
+                      },
+                      "followers": {
+                        "object": true
+                      },
+                      "genres": [
+                        "json array"
+                      ],
+                      "href": "https://api.spotify.com/v1/artists/1FcYCSOydUCgoauspPwypS",
+                      "id": "1FcYCSOydUCgoauspPwypS",
+                      "images": [
+                        "json array"
+                      ],
+                      "name": "Majida El Roumi",
+                      "popularity": 46,
+                      "type": "artist",
+                      "uri": "spotify:artist:1FcYCSOydUCgoauspPwypS"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify9": [
+          {
+            "hints": [],
+            "startTime": 1738078273337,
+            "executionTime": 320,
+            "source": [
+              {
+                "previousNode": "Spotify8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "collaborative": false,
+                      "description": "null",
+                      "external_urls": {
+                        "object": true
+                      },
+                      "followers": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/playlists/2m050JGz8huD60KtVsdGdO",
+                      "id": "2m050JGz8huD60KtVsdGdO",
+                      "images": {
+                        "object": true
+                      },
+                      "name": "Playlist1738077949915",
+                      "owner": {
+                        "object": true
+                      },
+                      "primary_color": {
+                        "object": true
+                      },
+                      "public": true,
+                      "snapshot_id": "AAAAAebGm4/q1Hne6z82GJgEbUleXVng",
+                      "tracks": {
+                        "object": true
+                      },
+                      "type": "playlist",
+                      "uri": "spotify:playlist:2m050JGz8huD60KtVsdGdO"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify4": [
+          {
+            "hints": [],
+            "startTime": 1738078273657,
+            "executionTime": 352,
+            "source": [
+              {
+                "previousNode": "Spotify1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "album_type": "album",
+                      "total_tracks": 9,
+                      "available_markets": [
+                        "json array"
+                      ],
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/albums/5ZJnifXQ8ovGURQY7XhgCG",
+                      "id": "5ZJnifXQ8ovGURQY7XhgCG",
+                      "images": [
+                        "json array"
+                      ],
+                      "name": "Fauroziat فيروزيات (Instrumental)",
+                      "release_date": "2024-12-21",
+                      "release_date_precision": "day",
+                      "type": "album",
+                      "uri": "spotify:album:5ZJnifXQ8ovGURQY7XhgCG",
+                      "artists": [
+                        "json array"
+                      ],
+                      "tracks": {
+                        "object": true
+                      },
+                      "copyrights": [
+                        "json array"
+                      ],
+                      "external_ids": {
+                        "object": true
+                      },
+                      "genres": [
+                        "json array"
+                      ],
+                      "label": "Atef Bahr",
+                      "popularity": 28
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify10": [
+          {
+            "hints": [],
+            "startTime": 1738078274009,
+            "executionTime": 372,
+            "source": [
+              {
+                "previousNode": "Spotify9"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "snapshot_id": "AAAAAgf1VUuDF87h4cPUVQxQnPYC+D8z"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify13": [
+          {
+            "hints": [],
+            "startTime": 1738078274381,
+            "executionTime": 628,
+            "source": [
+              {
+                "previousNode": "Spotify4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "album_type": "single",
+                      "artists": [
+                        "json array"
+                      ],
+                      "available_markets": [
+                        "json array"
+                      ],
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/albums/0PO4r8g1jXKGbVSaO5BQh4",
+                      "id": "0PO4r8g1jXKGbVSaO5BQh4",
+                      "images": [
+                        "json array"
+                      ],
+                      "name": "Bla Bik (بلا بيك)",
+                      "release_date": "2025-01-09",
+                      "release_date_precision": "day",
+                      "total_tracks": 1,
+                      "type": "album",
+                      "uri": "spotify:album:0PO4r8g1jXKGbVSaO5BQh4"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify11": [
+          {
+            "hints": [],
+            "startTime": 1738078275009,
+            "executionTime": 301,
+            "source": [
+              {
+                "previousNode": "Spotify10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "added_at": "2025-01-28T15:31:14Z",
+                      "added_by": {
+                        "object": true
+                      },
+                      "is_local": false,
+                      "primary_color": {
+                        "object": true
+                      },
+                      "track": {
+                        "object": true
+                      },
+                      "video_thumbnail": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify5": [
+          {
+            "hints": [],
+            "startTime": 1738078275310,
+            "executionTime": 293,
+            "source": [
+              {
+                "previousNode": "Spotify13"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "artists": [
+                        "json array"
+                      ],
+                      "available_markets": [
+                        "json array"
+                      ],
+                      "disc_number": 1,
+                      "duration_ms": 304266,
+                      "explicit": false,
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/tracks/3M84jLJbkduv2Zc3xIHPRl",
+                      "id": "3M84jLJbkduv2Zc3xIHPRl",
+                      "name": "Tayr Lwarwar طير الوروار",
+                      "preview_url": "https://p.scdn.co/mp3-preview/eb6cfe4dab53c8c9e2689539539fd8e492212fcc?cid=d6fc82a01ffb43538b33c4003257c758",
+                      "track_number": 1,
+                      "type": "track",
+                      "uri": "spotify:track:3M84jLJbkduv2Zc3xIHPRl",
+                      "is_local": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify12": [
+          {
+            "hints": [],
+            "startTime": 1738078275603,
+            "executionTime": 374,
+            "source": [
+              {
+                "previousNode": "Spotify11"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify6": [
+          {
+            "hints": [],
+            "startTime": 1738078275977,
+            "executionTime": 269,
+            "source": [
+              {
+                "previousNode": "Spotify5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "album": {
+                        "object": true
+                      },
+                      "artists": [
+                        "json array"
+                      ],
+                      "available_markets": [
+                        "json array"
+                      ],
+                      "disc_number": 1,
+                      "duration_ms": 304266,
+                      "explicit": false,
+                      "external_ids": {
+                        "object": true
+                      },
+                      "external_urls": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/tracks/3M84jLJbkduv2Zc3xIHPRl",
+                      "id": "3M84jLJbkduv2Zc3xIHPRl",
+                      "is_local": false,
+                      "name": "Tayr Lwarwar طير الوروار",
+                      "popularity": 29,
+                      "preview_url": "https://p.scdn.co/mp3-preview/eb6cfe4dab53c8c9e2689539539fd8e492212fcc?cid=d6fc82a01ffb43538b33c4003257c758",
+                      "track_number": 1,
+                      "type": "track",
+                      "uri": "spotify:track:3M84jLJbkduv2Zc3xIHPRl"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify16": [
+          {
+            "hints": [],
+            "startTime": 1738078276246,
+            "executionTime": 383,
+            "source": [
+              {
+                "previousNode": "Spotify12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "collaborative": false,
+                      "description": "null",
+                      "external_urls": {
+                        "object": true
+                      },
+                      "followers": {
+                        "object": true
+                      },
+                      "href": "https://api.spotify.com/v1/playlists/4PaWhv1uwJh1WhCtmdWYQz",
+                      "id": "4PaWhv1uwJh1WhCtmdWYQz",
+                      "images": [
+                        "json array"
+                      ],
+                      "primary_color": {
+                        "object": true
+                      },
+                      "name": "Playlist1738078276250",
+                      "type": "playlist",
+                      "uri": "spotify:playlist:4PaWhv1uwJh1WhCtmdWYQz",
+                      "owner": {
+                        "object": true
+                      },
+                      "public": true,
+                      "snapshot_id": "AAAIOq/vq09a7E9SmPmJNQzkyHAxyl6P",
+                      "tracks": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Spotify7": [
+          {
+            "hints": [],
+            "startTime": 1738078276629,
+            "executionTime": 226,
+            "source": [
+              {
+                "previousNode": "Spotify6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "danceability": 0.599,
+                      "energy": 0.639,
+                      "key": 0,
+                      "loudness": -7.542,
+                      "mode": 1,
+                      "speechiness": 0.0448,
+                      "acousticness": 0.307,
+                      "instrumentalness": 0.363,
+                      "liveness": 0.0685,
+                      "valence": 0.78,
+                      "tempo": 119.334,
+                      "type": "audio_features",
+                      "id": "3M84jLJbkduv2Zc3xIHPRl",
+                      "uri": "spotify:track:3M84jLJbkduv2Zc3xIHPRl",
+                      "track_href": "https://api.spotify.com/v1/tracks/3M84jLJbkduv2Zc3xIHPRl",
+                      "analysis_url": "https://api.spotify.com/v1/audio-analysis/3M84jLJbkduv2Zc3xIHPRl",
+                      "duration_ms": 304267,
+                      "time_signature": 4
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Spotify7"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:31:09.302Z",
+  "stoppedAt": "2025-01-28T15:31:16.855Z",
+  "status": "running",
+  "finished": true
+}

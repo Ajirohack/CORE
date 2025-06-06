@@ -1,0 +1,238 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078163317,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Webflow": [
+          {
+            "hints": [],
+            "startTime": 1738078163317,
+            "executionTime": 809,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "_cid": "608289f18593d40792d70d54",
+                      "_id": "6798f7d330e08a1d4fd70b5f",
+                      "_draft": true,
+                      "_archived": false,
+                      "name": "Item1738078163319",
+                      "slug": "ItemSlug1738078163322",
+                      "updated-on": "2025-01-28T15:29:23.820Z",
+                      "updated-by": "Person_60828826c12bb73d4752eedb",
+                      "created-on": "2025-01-28T15:29:23.820Z",
+                      "created-by": "Person_60828826c12bb73d4752eedb",
+                      "published-on": {
+                        "object": true
+                      },
+                      "published-by": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Webflow1": [
+          {
+            "hints": [],
+            "startTime": 1738078164126,
+            "executionTime": 563,
+            "source": [
+              {
+                "previousNode": "Webflow"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "_cid": "608289f18593d40792d70d54",
+                      "_id": "6798f7d330e08a1d4fd70b5f",
+                      "_draft": true,
+                      "_archived": false,
+                      "name": "Item1738078163319",
+                      "slug": "ItemSlug1738078163322",
+                      "updated-on": "2025-01-28T15:29:23.820Z",
+                      "updated-by": "Person_60828826c12bb73d4752eedb",
+                      "created-on": "2025-01-28T15:29:23.820Z",
+                      "created-by": "Person_60828826c12bb73d4752eedb",
+                      "published-on": {
+                        "object": true
+                      },
+                      "published-by": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Webflow2": [
+          {
+            "hints": [],
+            "startTime": 1738078164689,
+            "executionTime": 1121,
+            "source": [
+              {
+                "previousNode": "Webflow1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "_cid": "608289f18593d40792d70d54",
+                      "_id": "6798f7d330e08a1d4fd70b5f",
+                      "_draft": false,
+                      "_archived": false,
+                      "name": "UpdatedItem1738078163319",
+                      "slug": "UpdatedItemSlug1738078163322",
+                      "updated-on": "2025-01-28T15:29:25.432Z",
+                      "updated-by": "Person_60828826c12bb73d4752eedb",
+                      "created-on": "2025-01-28T15:29:23.820Z",
+                      "created-by": "Person_60828826c12bb73d4752eedb",
+                      "published-on": {
+                        "object": true
+                      },
+                      "published-by": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Webflow3": [
+          {
+            "hints": [],
+            "startTime": 1738078165810,
+            "executionTime": 1221,
+            "source": [
+              {
+                "previousNode": "Webflow2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "deleted": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Webflow4": [
+          {
+            "hints": [],
+            "startTime": 1738078167031,
+            "executionTime": 983,
+            "source": [
+              {
+                "previousNode": "Webflow3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "_cid": "608289f18593d40792d70d54",
+                      "_id": "668801d4c89cdad6305c9fb3",
+                      "_draft": false,
+                      "_archived": false,
+                      "name": "interesting",
+                      "slug": "test-da5e5",
+                      "updated-on": "2024-07-05T15:27:59.922Z",
+                      "updated-by": "Person_60828826c12bb73d4752eedb",
+                      "created-on": "2024-07-05T14:23:16.749Z",
+                      "created-by": "Person_60828826c12bb73d4752eedb",
+                      "published-on": {
+                        "object": true
+                      },
+                      "published-by": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Webflow4"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:23.316Z",
+  "stoppedAt": "2025-01-28T15:29:28.014Z",
+  "status": "running",
+  "finished": true
+}

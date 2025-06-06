@@ -1,0 +1,165 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078174372,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Handle JSON data": [
+          {
+            "hints": [],
+            "startTime": 1738078174372,
+            "executionTime": 7,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "arr": [
+                        "json array"
+                      ],
+                      "str": "Testing Function Item node",
+                      "num": 1337,
+                      "obj": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Handle Binary data": [
+          {
+            "hints": [],
+            "startTime": 1738078174379,
+            "executionTime": 7,
+            "source": [
+              {
+                "previousNode": "Handle JSON data"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "arr": [
+                        "json array"
+                      ],
+                      "str": "Testing Function Item node",
+                      "num": 1337,
+                      "obj": {
+                        "object": true
+                      },
+                      "binaryData": "NIL"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "binary": {
+                      "data": {
+                        "data": "SGVsbG8gZnJvbSBuOG4gRnVuY3Rpb24gaXRlbSB0ZXN0aW5nIHdvcmtmbG93",
+                        "mimeType": "text",
+                        "fileExtension": "text",
+                        "fileName": "testfile"
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Handle Static data": [
+          {
+            "hints": [],
+            "startTime": 1738078174386,
+            "executionTime": 8,
+            "source": [
+              {
+                "previousNode": "Handle Binary data"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "arr": [
+                        "json array"
+                      ],
+                      "str": "Testing Function Item node",
+                      "num": 1337,
+                      "obj": {
+                        "object": true
+                      },
+                      "binaryData": "NIL",
+                      "globalStaticMessage": "Hello, Global Static Data",
+                      "nodeStaticMessage": "Hello, Node Static Data"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "binary": {
+                      "data": {
+                        "data": "SGVsbG8gZnJvbSBuOG4gRnVuY3Rpb24gaXRlbSB0ZXN0aW5nIHdvcmtmbG93",
+                        "mimeType": "text",
+                        "fileExtension": "text",
+                        "fileName": "testfile"
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Handle Static data"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:34.372Z",
+  "stoppedAt": "2025-01-28T15:29:34.394Z",
+  "status": "running",
+  "finished": true
+}

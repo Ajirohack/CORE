@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG System Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #response {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+        #loading {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .source {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #007bff;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RAG System Test</h1>
+    <div class="container">
+        <div class="form-group">
+            <label for="provider">LLM Provider:</label>
+            <select id="provider">
+                {% for key, name in providers.items() %}
+                <option value="{{ key }}" {% if key == current_provider %}selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="query">Query:</label>
+            <textarea id="query" rows="3" placeholder="What is the membership registration process for Space WH?"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="temperature">Temperature: <span id="temp-value">0.0</span></label>
+            <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.0">
+        </div>
+        <button id="submit">Search</button>
+    </div>
+    
+    <div id="loading">
+        <img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" alt="Loading..." height="50">
+        <p>Processing your query...</p>
+    </div>
+    
+    <div id="response">
+        <h2>Response</h2>
+        <div id="answer"></div>
+        <div id="sources"></div>
+    </div>
+
+    <script>
+        // Update temperature value display
+        const tempSlider = document.getElementById('temperature');
+        const tempValue = document.getElementById('temp-value');
+        
+        tempSlider.addEventListener('input', function() {
+            tempValue.textContent = this.value;
+        });
+        
+        // Handle form submission
+        document.getElementById('submit').addEventListener('click', function() {
+            const provider = document.getElementById('provider').value;
+            const query = document.getElementById('query').value;
+            const temperature = document.getElementById('temperature').value;
+            
+            if (!query) {
+                alert('Please enter a query');
+                return;
+            }
+            
+            // Show loading indicator
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('response').style.display = 'none';
+            
+            // Create form data
+            const formData = new FormData();
+            formData.append('query', query);
+            formData.append('provider', provider);
+            formData.append('temperature', temperature);
+            
+            // Send request
+            fetch('/search', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading indicator
+                document.getElementById('loading').style.display = 'none';
+                
+                // Show response
+                document.getElementById('response').style.display = 'block';
+                
+                if (data.error) {
+                    document.getElementById('answer').innerHTML = `<p style="color: red;">Error: ${data.error}</p>`;
+                    document.getElementById('sources').innerHTML = '';
+                } else {
+                    document.getElementById('answer').innerHTML = `<p><strong>Question:</strong> ${data.question}</p><p><strong>Answer:</strong> ${data.answer.replace(/\n/g, '<br>')}</p>`;
+                    
+                    if (data.sources && data.sources.length > 0) {
+                        let sourcesHtml = '<h3>Sources:</h3><ul>';
+                        data.sources.forEach(source => {
+                            sourcesHtml += `<li class="source">${source}</li>`;
+                        });
+                        sourcesHtml += '</ul>';
+                        document.getElementById('sources').innerHTML = sourcesHtml;
+                    } else {
+                        document.getElementById('sources').innerHTML = '';
+                    }
+                }
+            })
+            .catch(error => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('response').style.display = 'block';
+                document.getElementById('answer').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                document.getElementById('sources').innerHTML = '';
+            });
+        });
+    </script>
+</body>
+</html>

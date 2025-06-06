@@ -1,0 +1,24 @@
+# Superior RAG System Development Configuration
+# This overrides specific settings from the default configuration for development mode
+
+# API settings
+api:
+  port: 8000
+
+# Logging settings
+logging:
+  level: "DEBUG"
+
+# LLM settings
+llm:
+  temperature: 0.1 # Slightly higher for development
+  max_tokens: 2048 # More tokens for development testing
+
+# Retrieval settings
+retrieval:
+  enable_reflection: true # Enable reflection to see debugging outputs
+
+# Document processing settings
+document_processing:
+  chunk_size: 500 # Smaller chunks for faster processing during development
+  chunk_overlap: 100

@@ -1,0 +1,102 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078156720,
+            "executionTime": 1,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS SQS1": [
+          {
+            "hints": [],
+            "startTime": 1738078156721,
+            "executionTime": 643,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "MessageId": "b46a87c7-45a7-4bfd-8bfa-b313021e186a",
+                      "MD5OfMessageBody": "529f279b01bc6c05f2e9a6e5b8cee5f0",
+                      "MD5OfMessageAttributes": "563c033205d4d7ddc71dceef55cae220",
+                      "SequenceNumber": "166465644613362540544"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS SQS": [
+          {
+            "hints": [],
+            "startTime": 1738078157364,
+            "executionTime": 620,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "MessageId": "50b1a74f-74c7-4aaa-bb15-ec912de8775b",
+                      "MD5OfMessageBody": "c14af9d4ea057f3c8acac33cc8d70829",
+                      "MD5OfMessageAttributes": "563c033205d4d7ddc71dceef55cae220"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AWS SQS"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:16.720Z",
+  "stoppedAt": "2025-01-28T15:29:17.984Z",
+  "status": "running",
+  "finished": true
+}

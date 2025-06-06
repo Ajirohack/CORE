@@ -1,0 +1,192 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078276878,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster": [
+          {
+            "hints": [],
+            "startTime": 1738078276878,
+            "executionTime": 409,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8756817235927468",
+                      "name": "Email Extractor",
+                      "createdAt": 1614591862755,
+                      "scriptOrgName": "phantombuster",
+                      "scriptId": "6774",
+                      "script": "Email Extractor.js",
+                      "branch": "master",
+                      "environment": "release",
+                      "manifest": {
+                        "object": true
+                      },
+                      "lastEndType": "finished",
+                      "lastEndedAt": 1738077955815,
+                      "lastExitCode": 0,
+                      "nbContainersRunning": 0,
+                      "runningTime": {
+                        "object": true
+                      },
+                      "launchType": "manually",
+                      "s3Folder": "UKSkFmaigVohTti7pkwW0A"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster1": [
+          {
+            "hints": [],
+            "startTime": 1738078277287,
+            "executionTime": 329,
+            "source": [
+              {
+                "previousNode": "Phantombuster"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8756817235927468",
+                      "scriptOrgName": "phantombuster",
+                      "scriptId": "6774",
+                      "script": "Email Extractor.js",
+                      "branch": "master",
+                      "environment": "release",
+                      "argument": "{\n\t\"urls\": [\n\t\t\"https://n8n.io/\"\n\t],\n\t\"timeToWait\": 5000,\n\t\"pagesPerLaunch\": 1,\n\t\"onlyGetOneEmail\": false\n}",
+                      "code": {
+                        "object": true
+                      },
+                      "launchType": "manually",
+                      "nbLaunches": 2089,
+                      "s3Folder": "UKSkFmaigVohTti7pkwW0A",
+                      "orgS3Folder": "sTTpLenO2iY",
+                      "updatedAt": 1614591972895,
+                      "name": "Email Extractor",
+                      "fileMgmt": "mix",
+                      "lastEndType": "finished"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster2": [
+          {
+            "hints": [],
+            "startTime": 1738078277617,
+            "executionTime": 960,
+            "source": [
+              {
+                "previousNode": "Phantombuster1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "containerId": "2417402919955833"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster3": [
+          {
+            "hints": [],
+            "startTime": 1738078278578,
+            "executionTime": 389,
+            "source": [
+              {
+                "previousNode": "Phantombuster2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "containerId": "2417402919955833",
+                      "status": "running",
+                      "output": "",
+                      "outputPos": 0,
+                      "isAgentRunning": true,
+                      "canSoftAbort": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Phantombuster3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:31:16.878Z",
+  "stoppedAt": "2025-01-28T15:31:18.967Z",
+  "status": "running",
+  "finished": true
+}

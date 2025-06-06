@@ -1,0 +1,600 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078143822,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com": [
+          {
+            "hints": [],
+            "startTime": 1738078143822,
+            "executionTime": 1312,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342956281"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com1": [
+          {
+            "hints": [],
+            "startTime": 1738078145135,
+            "executionTime": 624,
+            "source": [
+              {
+                "previousNode": "Monday.com"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342956281",
+                      "name": "Board1738078143827",
+                      "description": {
+                        "object": true
+                      },
+                      "state": "active",
+                      "board_folder_id": {
+                        "object": true
+                      },
+                      "board_kind": "private",
+                      "owners": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com2": [
+          {
+            "hints": [],
+            "startTime": 1738078145760,
+            "executionTime": 445,
+            "source": [
+              {
+                "previousNode": "Monday.com1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342956281",
+                      "name": "Board1738078143827",
+                      "description": {
+                        "object": true
+                      },
+                      "state": "active",
+                      "board_folder_id": {
+                        "object": true
+                      },
+                      "board_kind": "private",
+                      "owners": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com4": [
+          {
+            "hints": [],
+            "startTime": 1738078146206,
+            "executionTime": 984,
+            "source": [
+              {
+                "previousNode": "Monday.com2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "column1738078146212_mkmmhr5g"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com6": [
+          {
+            "hints": [],
+            "startTime": 1738078147191,
+            "executionTime": 800,
+            "source": [
+              {
+                "previousNode": "Monday.com4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "group1738078147196_mkmmnnr1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com9": [
+          {
+            "hints": [],
+            "startTime": 1738078147992,
+            "executionTime": 910,
+            "source": [
+              {
+                "previousNode": "Monday.com6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342957159"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com10": [
+          {
+            "hints": [],
+            "startTime": 1738078148902,
+            "executionTime": 1078,
+            "source": [
+              {
+                "previousNode": "Monday.com9"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "3812123435"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com11": [
+          {
+            "hints": [],
+            "startTime": 1738078149980,
+            "executionTime": 925,
+            "source": [
+              {
+                "previousNode": "Monday.com10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342957159"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com12": [
+          {
+            "hints": [],
+            "startTime": 1738078150905,
+            "executionTime": 1062,
+            "source": [
+              {
+                "previousNode": "Monday.com11"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342957159",
+                      "name": "Item1738078148001",
+                      "created_at": "2025-01-28T15:29:08Z",
+                      "state": "active",
+                      "column_values": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com13": [
+          {
+            "hints": [],
+            "startTime": 1738078151967,
+            "executionTime": 1134,
+            "source": [
+              {
+                "previousNode": "Monday.com12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342957159",
+                      "name": "Item1738078148001",
+                      "created_at": "2025-01-28T15:29:08Z",
+                      "state": "active",
+                      "column_values": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com14": [
+          {
+            "hints": [],
+            "startTime": 1738078153101,
+            "executionTime": 732,
+            "source": [
+              {
+                "previousNode": "Monday.com13"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342956344",
+                      "name": "Task 1",
+                      "created_at": "2025-01-28T15:29:04Z",
+                      "state": "active",
+                      "board": {
+                        "object": true
+                      },
+                      "column_values": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com15": [
+          {
+            "hints": [],
+            "startTime": 1738078153833,
+            "executionTime": 575,
+            "source": [
+              {
+                "previousNode": "Monday.com14"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342957159"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com16": [
+          {
+            "hints": [],
+            "startTime": 1738078154408,
+            "executionTime": 856,
+            "source": [
+              {
+                "previousNode": "Monday.com15"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342957159"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com7": [
+          {
+            "hints": [],
+            "startTime": 1738078155264,
+            "executionTime": 1089,
+            "source": [
+              {
+                "previousNode": "Monday.com16"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "group1738078147196_mkmmnnr1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com8": [
+          {
+            "hints": [],
+            "startTime": 1738078156354,
+            "executionTime": 719,
+            "source": [
+              {
+                "previousNode": "Monday.com7"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "topics",
+                      "title": "Group Title",
+                      "color": "#037f4c",
+                      "position": "65536",
+                      "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com5": [
+          {
+            "hints": [],
+            "startTime": 1738078157073,
+            "executionTime": 410,
+            "source": [
+              {
+                "previousNode": "Monday.com8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "name",
+                      "title": "Name",
+                      "type": "name",
+                      "settings_str": "{}",
+                      "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "column1738078146212_mkmmhr5g",
+                      "title": "Column1738078146212",
+                      "type": "checkbox",
+                      "settings_str": "{}",
+                      "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge": [
+          {
+            "hints": [],
+            "startTime": 1738078157484,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Monday.com5"
+              },
+              {
+                "previousNode": "Monday.com5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": [
+                      {
+                        "item": 0
+                      },
+                      {
+                        "item": 1
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Monday.com3": [
+          {
+            "hints": [],
+            "startTime": 1738078157485,
+            "executionTime": 750,
+            "source": [
+              {
+                "previousNode": "Merge"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8342956281"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Monday.com3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:03.820Z",
+  "stoppedAt": "2025-01-28T15:29:18.236Z",
+  "status": "running",
+  "finished": true
+}

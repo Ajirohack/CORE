@@ -1,0 +1,146 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Trigger Slack File Upload",
+      "type": "n8n-nodes-base.slackTrigger",
+      "typeVersion": 1,
+      "position": [
+        200,
+        300
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "your-credential-id",
+          "name": "Slack Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "get",
+        "fileId": "={{$json.event.file.id}}"
+      },
+      "name": "Get File Info",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "your-credential-id",
+          "name": "Slack Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{$json.url_private}}",
+        "options": {
+          "headers": {
+            "Authorization": "Bearer YOUR_SLACK_TOKEN"
+          }
+        },
+        "responseFormat": "file"
+      },
+      "name": "Download File",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const text = $binary.data.toString('utf8');\nreturn [{ json: { text } }];"
+      },
+      "name": "Extract Text",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-ada-002",
+        "input": "={{$json[\"text\"]}}"
+      },
+      "name": "Generate Embedding",
+      "type": "@n8n/n8n-nodes-langchain.textEmbeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "your-openai-id",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": "documents",
+        "options": {}
+      },
+      "name": "Insert into Supabase Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        300
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "your-supabase-id",
+          "name": "Supabase account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Trigger Slack File Upload": {
+      "main": [
+        [
+          "Get File Info"
+        ]
+      ]
+    },
+    "Get File Info": {
+      "main": [
+        [
+          "Download File"
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          "Extract Text"
+        ]
+      ]
+    },
+    "Extract Text": {
+      "main": [
+        [
+          "Generate Embedding"
+        ]
+      ]
+    },
+    "Generate Embedding": {
+      "main": [
+        [
+          "Insert into Supabase Vectorstore"
+        ]
+      ]
+    }
+  }
+}

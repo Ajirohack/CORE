@@ -1,0 +1,10 @@
+_type: prompt
+input_types: {}
+input_variables:
+- question
+name: null
+output_parser: null
+partial_variables: {}
+template: "answer with explanations the following question: {question} \n if answer is not contained in the image only say \"answer not in context\""
+template_format: f-string
+validate_template: false

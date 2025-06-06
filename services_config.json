@@ -1,0 +1,34 @@
+{
+  "engines": {
+    "path": "engines/run_engines.py",
+    "port": 8001,
+    "enabled": true,
+    "description": "Pluggable engine implementations for workflow processing",
+    "health_endpoint": "/health",
+    "process_endpoint": "/api/v1/engines/process"
+  },
+  "llm-council": {
+    "path": "llm-council/run_council.py",
+    "port": 8002,
+    "enabled": true,
+    "description": "Multi-agent orchestration and specialist reasoning",
+    "health_endpoint": "/health",
+    "process_endpoint": "/api/v1/council/process"
+  },
+  "packages": {
+    "path": "packages/run_packages.py",
+    "port": 8003,
+    "enabled": true,
+    "description": "Tool registry and execution system",
+    "health_endpoint": "/health",
+    "process_endpoint": "/api/v1/packages/process"
+  },
+  "rag": {
+    "path": "rag/run_rag.py",
+    "port": 8004,
+    "enabled": true,
+    "description": "Retrieval-Augmented Generation with multi-modal storage",
+    "health_endpoint": "/health",
+    "process_endpoint": "/api/v1/rag/process"
+  }
+}

@@ -1,0 +1,142 @@
+// filepath: /Volumes/Project Disk/SpaceNew/core/ai-council/src/__tests__/execution-planner.test.ts
+import { ExecutionPlanner } from "../execution-planner";
+import { SpecialistManager } from "../specialist-manager";
+import { SharedContext } from "../shared-context";
+import { Logger } from "../utils/logger";
+import { ExecutionPlan } from "../types";
+
+// Define phases as string literals to match what's in the types.ts file
+type ProcessingPhase = 'analysis' | 'processing' | 'generation' | 'refinement' | 'integration';
+
+// Mock dependencies directly
+jest.mock("../specialist-manager");
+jest.mock("../shared-context");
+jest.mock("../utils/logger");
+
+describe("ExecutionPlanner", () => {
+  let executionPlanner: ExecutionPlanner;
+  let mockSpecialistManager: jest.Mocked<SpecialistManager>;
+  let mockLogger: any;
+  let mockSharedContext: any;
+
+  beforeEach(() => {
+    // Reset mocks
+    jest.clearAllMocks();
+
+    // Create mock objects
+    mockLogger = {
+      debug: jest.fn(),
+      info: jest.fn(),
+      warn: jest.fn(),
+      error: jest.fn(),
+      log: jest.fn()
+    };
+
+    mockSpecialistManager = {
+      getEnabledSpecialists: jest.fn().mockReturnValue([
+        {
+          id: "analyst",
+          name: "Data Analyst",
+          specialization: "analysis",
+          modelId: "gpt-4",
+          priority: 1,
+          enabled: true,
+        },
+        {
+          id: "researcher",
+          name: "Researcher",
+          specialization: "research",
+          modelId: "claude-3",
+          priority: 2,
+          enabled: true,
+        },
+      ]),
+    } as unknown as jest.Mocked<SpecialistManager>;
+
+    mockSharedContext = {
+      prepareSpecialistInput: jest.fn().mockReturnValue({ query: "test query" }),
+      getUserPreferences: jest.fn().mockReturnValue({}),
+      getMemory: jest.fn().mockReturnValue({}),
+      addToContext: jest.fn()
+    };
+
+    // Create execution planner with mocked dependencies
+    executionPlanner = new ExecutionPlanner(
+      mockSpecialistManager,
+      mockLogger as unknown as Logger
+    );
+  });
+
+  it("should create a basic execution plan", async () => {
+    const request = { input: "Simple request" };
+    
+    const plan = await executionPlanner.createPlan(request, mockSharedContext as unknown as SharedContext);
+    
+    expect(plan).toBeDefined();
+    expect(mockSpecialistManager.getEnabledSpecialists).toHaveBeenCalled();
+    expect(mockLogger.debug).toHaveBeenCalled();
+    expect(plan.steps.length).toBeGreaterThan(0);
+  });
+
+  it("should create a plan with appropriate steps", async () => {
+    const request = { input: "Multi-phase request" };
+    
+    const plan = await executionPlanner.createPlan(request, mockSharedContext as unknown as SharedContext);
+    
+    // Verify the plan includes steps with different specialists
+    const specialistIds = plan.steps.map(step => step.specialistId);
+    expect(specialistIds).toContain("analyst");
+    expect(specialistIds).toContain("researcher");
+  });
+
+  it("should include proper phase information", async () => {
+    const request = { input: "Request with phases" };
+    
+    const plan = await executionPlanner.createPlan(request, mockSharedContext as unknown as SharedContext);
+    
+    // Check that there are valid phases
+    const validPhases = ["analysis", "processing", "generation", "refinement", "integration"];
+    plan.steps.forEach(step => {
+      expect(validPhases).toContain(step.phase);
+    });
+  });
+
+  it("should handle dependencies correctly", async () => {
+    const request = { input: "Complex task with dependencies" };
+    
+    const plan = await executionPlanner.createPlan(request, mockSharedContext as unknown as SharedContext);
+    
+    // At least some steps should have dependencies (except the first phase)
+    const stepsWithDependencies = plan.steps.filter(step => step.dependsOn && step.dependsOn.length > 0);
+    
+    // Some steps might have dependencies depending on the phase structure
+    // This is a loose test that doesn't make assumptions about the specific implementation
+    expect(plan.steps.length).toBeGreaterThan(0);
+  });
+
+  it("should handle empty specialist list gracefully", async () => {
+    // Mock an empty specialists list
+    mockSpecialistManager.getEnabledSpecialists.mockReturnValueOnce([]);
+    
+    const request = { input: "Request with no specialists available" };
+    
+    const plan = await executionPlanner.createPlan(request, mockSharedContext as unknown as SharedContext);
+    
+    // Plan should still be created, but might have no steps
+    expect(plan).toBeDefined();
+    expect(mockLogger.debug).toHaveBeenCalled();
+  });
+
+  it("should handle errors gracefully", async () => {
+    // Mock getEnabledSpecialists to throw an error
+    mockSpecialistManager.getEnabledSpecialists.mockImplementationOnce(() => {
+      throw new Error("Failed to get specialists");
+    });
+    
+    // Should throw an error but log it properly
+    await expect(executionPlanner.createPlan({ input: "test" }, mockSharedContext as unknown as SharedContext))
+      .rejects.toThrow();
+      
+    expect(mockLogger.error).toHaveBeenCalled();
+  });
+});

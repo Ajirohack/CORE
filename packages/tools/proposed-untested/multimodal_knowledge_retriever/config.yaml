@@ -1,0 +1,29 @@
+llm: 
+    "type": "sncloud" # set either sncloud or sambastudio
+    "temperature": 0.0
+    "do_sample": False
+    "max_tokens_to_generate": 1200
+    "bundle": True #set as true if using Sambastudio bundle endpoint
+    "select_expert": "Meta-Llama-3.1-70B-Instruct"  #set if using SambaNovaCloud or SambaStudio bundle llm expert
+
+lvlm:
+    "model": "Llama-3.2-11B-Vision-Instruct"
+    "do_sample": false
+    "max_tokens_to_generate": 512 
+    "temperature": 1
+    "top_k": 50
+    "top_p": 1
+
+embedding_model: 
+    "type": "cpu" # set either sambastudio or cpu
+    "batch_size": 1 #set depending of your endpoint configuration (1 if bundle embedding expert)
+    "bundle": True #set true if using Sambastudio embeddings in a bundle endpoint 
+    "select_expert": "e5-mistral-7b-instruct" #set if using SambaStudio bundle embedding expert
+
+retrieval:
+    "max_characters": 800
+    "new_after_n_chars": 500
+    "combine_text_under_n_chars": 300
+    "k_retrieved_documents": 4
+
+prod_mode: False

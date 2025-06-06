@@ -1,0 +1,179 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078292004,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "FunctionItem": [
+          {
+            "hints": [],
+            "startTime": 1738078292004,
+            "executionTime": 9,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "name": "test",
+                      "indexes": [
+                        "json array"
+                      ],
+                      "subobj": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Move Binary Data": [
+          {
+            "hints": [],
+            "startTime": 1738078292013,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "FunctionItem"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "binary": {
+                      "data": {
+                        "mimeType": "application/json",
+                        "fileType": "json",
+                        "fileExtension": "json",
+                        "data": "eyJuYW1lIjoidGVzdCIsImluZGV4ZXMiOlsxLDIsM10sInN1Ym9iaiI6eyJuYW1lIjoic3VidGVzdCJ9fQ==",
+                        "fileSize": "61 B"
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Move Binary Data1": [
+          {
+            "hints": [],
+            "startTime": 1738078292014,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Move Binary Data"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "name": "test",
+                      "indexes": [
+                        "json array"
+                      ],
+                      "subobj": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "binary": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function": [
+          {
+            "hints": [],
+            "startTime": 1738078292015,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Move Binary Data1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "name": "test",
+                      "indexes": [
+                        "json array"
+                      ],
+                      "subobj": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "binary": {},
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Function"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:31:32.003Z",
+  "stoppedAt": "2025-01-28T15:31:32.019Z",
+  "status": "running",
+  "finished": true
+}

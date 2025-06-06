@@ -1,0 +1,1041 @@
+{
+  "name": "Allow Users to Send a Sequence of Messages to an AI Agent in Telegram",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 3. AI Assistant\n",
+        "height": 520,
+        "width": 600,
+        "color": 7
+      },
+      "id": "ff18667d-0a31-4768-acf8-ed0d53b2f382",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2960,
+        220
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Receive Message').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "id": "ce90f954-19b6-4224-ae88-b20c4da639e6",
+      "name": "Reply",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        3720,
+        360
+      ],
+      "webhookId": "e3313c88-0d56-4d06-81cf-b48870dfe2fe",
+      "typeVersion": 1.2,
+      "credentials": {
+        "telegramApi": {
+          "id": "0zH1mlFwhuSF1ORa",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 2. Buffer Incoming Messages",
+        "height": 440,
+        "width": 1400,
+        "color": 7
+      },
+      "id": "8e6495d8-db6e-4692-ade5-45239049de34",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1480,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "a2eeb77f-2d74-44ac-9812-c3659d2e2803",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        2460,
+        600
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "=message"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "638fc82e-aba1-4deb-b506-33dcf4746896",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "position": [
+        3020,
+        360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "n8n_chat_histories",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "user_id",
+              "condition": "eq",
+              "keyValue": "={{ $json.user_id }}"
+            }
+          ]
+        }
+      },
+      "id": "772f60e5-e52f-4779-aa03-e4d532ee4b5c",
+      "name": "Delete Queued Messages",
+      "type": "n8n-nodes-base.supabase",
+      "position": [
+        2700,
+        360
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "supabaseApi": {
+          "id": "qq0Oo9qxVZuyqqiK",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 4. Send Reply\n\n\n",
+        "height": 260,
+        "width": 280,
+        "color": 7
+      },
+      "id": "16b46a70-85a0-4c8c-94ba-172ebe9aafa4",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3660,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8852bab7-230e-442a-a4a2-994e979c8f9f",
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $input.last().json.message_id }}\n",
+              "rightValue": "={{ $('Receive Message').item.json.message.message_id }}"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "85050328-b5aa-47fe-802c-7d9f31f225cb",
+      "name": "Check Most Recent Message",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2440,
+        380
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.join(String.fromCharCode(10)) }}",
+        "options": {}
+      },
+      "id": "bed86d81-bb57-42ce-aaa7-4bdc21e1651c",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        3220,
+        360
+      ],
+      "typeVersion": 1.7
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Receive Message').item.json.message.chat.id }}"
+      },
+      "id": "4f468a14-fbea-44ec-a2b8-e4b3785c0362",
+      "name": "Postgres Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "position": [
+        3220,
+        600
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "postgres": {
+          "id": "uiNtfZJ9OuqVItLz",
+          "name": "Postgres account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "### Modification\nReplace this sub-node \nto use a different language\n model",
+        "height": 140,
+        "width": 340,
+        "color": 5
+      },
+      "id": "24f388f3-5655-4bd4-9c30-978efb2dc400",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2980,
+        580
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Modification\nAdd a **System Message** to tailor the chatbot to your use case",
+        "height": 240,
+        "width": 340,
+        "color": 5
+      },
+      "id": "3db12526-6b97-4e3a-b53d-987f5d20c46e",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3180,
+        260
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": "openchat/openchat-7b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        3040,
+        620
+      ],
+      "id": "c530ccf9-8fbb-4fe6-ad1b-6d95345cac91",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "BBxzD0F41Ye2bmNc",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "### Modification\nChange the value of *Wait Amount* to vary the buffering window",
+        "height": 280,
+        "width": 220,
+        "color": 5
+      },
+      "id": "24604fc7-7957-4e20-8303-b31f2ce1e257",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1740,
+        360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Setup\n1. Create a table in Supabase called **message_queue**. It needs to have the following columns: **user_id** (`uint8`), **message** (`text`), and **message_id** (`uint8`)\n2. Add your **Telegram**, **Supabase**, **OpenAI**, and **PostgreSQL** credentials\n3. Activate the workflow and test by sending multiple messages the Telegram bot in one go\n4. Wait ten seconds after which you will receive a single reply to all of your messages",
+        "height": 220,
+        "width": 520
+      },
+      "id": "c8bd8777-fb0f-4941-8674-f5bb7c264506",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1160,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Allow Users to Send a Sequence of Messages to an AI Agent in Telegram with Supabase\n### Use Case\nWhen creating chatbots that interface through applications such as **Telegram** and **WhatsApp**, users can often sends multiple shorter messages in quick succession, in place of a single, longer message. This workflow accounts for this behaviour.\n### What it Does\nThis workflow allows users to send several messages in quick succession, treating them as one coherent conversation instead of separate messages requiring individual responses. \n### How it Works\n1. When messages arrive, they are stored in a **Supabase PostgreSQL** table\n2. The system waits briefly to see if additional messages arrive\n3. If no new messages arrive within the waiting period, all queued messages are:\n   - Combined and processed as a single conversation\n   - Responded to with one unified reply\n   - Deleted from the queue",
+        "height": 420,
+        "width": 700
+      },
+      "id": "610516e8-d4ad-448e-ac97-17aad1a31862",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        380,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "message_queue",
+        "returnAll": true,
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "user_id",
+              "condition": "eq",
+              "keyValue": "={{ $('Receive Message').item.json.message.from.id }}"
+            }
+          ]
+        }
+      },
+      "id": "1aa80c99-eec8-4174-bcf3-c6873354ed0f",
+      "name": "Get Queued Messages",
+      "type": "n8n-nodes-base.supabase",
+      "position": [
+        2020,
+        380
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "supabaseApi": {
+          "id": "qq0Oo9qxVZuyqqiK",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "message_id"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b47ef0c9-725b-4837-b9e9-96a4ff2b3636",
+      "name": "Sort by Message ID",
+      "type": "n8n-nodes-base.sort",
+      "position": [
+        2220,
+        380
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "n8n_chat_histories",
+        "matchType": "allFilters",
+        "dataToSend": "autoMapInputData"
+      },
+      "id": "d4876fd2-2e0b-4f82-9dc3-553f926310bd",
+      "name": "Add to Queued Messages",
+      "type": "n8n-nodes-base.supabase",
+      "position": [
+        1560,
+        380
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "supabaseApi": {
+          "id": "qq0Oo9qxVZuyqqiK",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 15
+      },
+      "id": "0f391daa-0e74-4058-8923-52f3c050c9ad",
+      "name": "Wait 10 Seconds",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        1800,
+        480
+      ],
+      "webhookId": "87994c9a-fd20-48b6-8dbe-9af36dc40b2f",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "6f46d89b-034c-47ea-a217-8d007bec1531",
+      "name": "Receive Message",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        1220,
+        380
+      ],
+      "webhookId": "5047a673-ca1d-4e87-b51b-893108de0a59",
+      "typeVersion": 1.1,
+      "credentials": {
+        "telegramApi": {
+          "id": "7QCzdM6ee6VmTOq9",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 1. Receive Message\n\n",
+        "height": 280,
+        "width": 220,
+        "color": 7
+      },
+      "id": "a3cc74e9-c696-48de-a04e-d48555641897",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1160,
+        260
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"file_id\": \"\"\n}"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        520,
+        1040
+      ],
+      "id": "df25f0c8-a4b1-444e-a414-51f670875183",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.file_id }}"
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        740,
+        1040
+      ],
+      "id": "f6ad5157-9d31-4842-af9b-bfc42cc52099",
+      "name": "Telegram",
+      "webhookId": "a584bb04-8f07-447f-9272-381f5b70ffe4"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('When Executed by Another Workflow').item.json.message.document.file_name }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "12dVXMe-em5GnCBmOzP1w8ENx6TaCpWNo",
+          "mode": "list",
+          "cachedResultName": "Test Folder",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/12dVXMe-em5GnCBmOzP1w8ENx6TaCpWNo"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        960,
+        1040
+      ],
+      "id": "46a6297a-bde3-4dc0-8836-64888867a137",
+      "name": "Google Drive"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "=data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        1040
+      ],
+      "id": "4e49cef2-5293-4316-b5f1-11d1f8874754",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        1040
+      ],
+      "id": "dd401ef3-6959-4603-a922-ba9915091328",
+      "name": "Google Drive1"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You're an intelligent bot at extracting data from documents.",
+              "role": "system"
+            },
+            {
+              "content": "=Please analyze the text below and extract the following items for me: Invoice #, Quantity, Price, Tax, Subtotal, Total, Date, Description.\n\nPlease make sure the output is JSON Data.\n\nHere's the text:\n {{ $json.text }}"
+            },
+            {
+              "content": "Please structure the data in JSON format exactly like this:\n[{\n  \"invoice_number\": \"INVOICE_NUMBER_PLACEHOLDER\",\n  \"date\": \"DATE_PLACEHOLDER\",\n  \"items\": [\n    {\n      \"description\": \"DESCRIPTION_PLACEHOLDER\",\n      \"quantity\": \"QUANTITY_PLACEHOLDER\",\n      \"price\": \"PRICE_PLACEHOLDER\",\n      \"tax\": \"TAX_PLACEHOLDER\",\n      \"subtotal\": \"SUBTOTAL_PLACEHOLDER\"\n    }\n  ],\n  \"total\": \"TOTAL_PLACEHOLDER\"\n}\n]",
+              "role": "assistant"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1620,
+        1040
+      ],
+      "id": "2fa01b64-5bca-4d46-85e3-628f3a5282c8",
+      "name": "OpenAI"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Gjyfz4L_LOvDQsNTBIlF2SsoUNz9PvQjmikIe1zcRIQ",
+          "mode": "list",
+          "cachedResultName": "n8n Personal Assistant",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Gjyfz4L_LOvDQsNTBIlF2SsoUNz9PvQjmikIe1zcRIQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Gjyfz4L_LOvDQsNTBIlF2SsoUNz9PvQjmikIe1zcRIQ/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Invoice #": "={{ $('OpenAI').item.json.message.content.invoice_number }}",
+            "Description": "={{ $json.description }}",
+            "Qty": "={{ $json.quantity }}",
+            "Price": "={{ $json.price }}",
+            "Tax": "={{ $json.tax }}",
+            "Subtotal": "={{ $json.subtotal }}",
+            "Total": "={{ $('OpenAI').item.json.message.content.invoice.total }}",
+            "Date": "={{ $now }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Invoice #",
+              "displayName": "Invoice #",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Qty",
+              "displayName": "Qty",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Price",
+              "displayName": "Price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tax",
+              "displayName": "Tax",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subtotal",
+              "displayName": "Subtotal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Total",
+              "displayName": "Total",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Description",
+              "displayName": "Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2200,
+        1040
+      ],
+      "id": "4d407832-c7f1-45f1-aef7-5e45ec15ed8f",
+      "name": "Google Sheets"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "message.content.items",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1980,
+        1040
+      ],
+      "id": "6f38b0d4-5790-4d12-af0b-2e22b303eedb",
+      "name": "Split Out"
+    }
+  ],
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "file_id": "BQACAgEAAxkBAAMoZ6-T0mSeT6IDz1TN0ZZli5OWSYUAAlMEAALwWnhFKSdut4sAAbOeNgQ"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Queued Messages": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Most Recent Message": {
+      "main": [
+        [
+          {
+            "node": "Delete Queued Messages",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Document Metadata Table": {
+      "main": [
+        [
+          {
+            "node": "Create Document Rows Table (for Tabular Data)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate1": {
+      "main": [
+        [
+          {
+            "node": "Set Schema",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Document Metadata": {
+      "main": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store1": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Query Document Rows": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get File Contents": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List Documents": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Queued Messages": {
+      "main": [
+        [
+          {
+            "node": "Sort by Message ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort by Message ID": {
+      "main": [
+        [
+          {
+            "node": "Check Most Recent Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add to Queued Messages": {
+      "main": [
+        [
+          {
+            "node": "Wait 10 Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 10 Seconds": {
+      "main": [
+        [
+          {
+            "node": "Get Queued Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Receive Message": {
+      "main": [
+        [
+          {
+            "node": "Add to Queued Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Google Drive1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive1": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "db286a07-b7a1-4306-b200-98e99c6d8bc2",
+  "meta": {
+    "templateId": "2917",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cea9572039ab50179c099356b712a4de460c0287da2ffac7351a448819350c33"
+  },
+  "id": "CPS9qMKHROI6923f",
+  "tags": []
+}

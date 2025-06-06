@@ -1,0 +1,305 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078266952,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Todoist": [
+          {
+            "hints": [],
+            "startTime": 1738078266952,
+            "executionTime": 1505,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8822673741",
+                      "assigner_id": {
+                        "object": true
+                      },
+                      "assignee_id": {
+                        "object": true
+                      },
+                      "project_id": "2259097055",
+                      "section_id": {
+                        "object": true
+                      },
+                      "parent_id": {
+                        "object": true
+                      },
+                      "order": 19,
+                      "content": "Test Task",
+                      "description": "",
+                      "is_completed": false,
+                      "labels": [
+                        "json array"
+                      ],
+                      "priority": 1,
+                      "comment_count": 0,
+                      "creator_id": "32694069",
+                      "created_at": "2025-01-28T15:31:07.953037Z",
+                      "due": {
+                        "object": true
+                      },
+                      "url": "https://app.todoist.com/app/task/8822673741",
+                      "duration": {
+                        "object": true
+                      },
+                      "deadline": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Todoist1": [
+          {
+            "hints": [],
+            "startTime": 1738078268457,
+            "executionTime": 506,
+            "source": [
+              {
+                "previousNode": "Todoist"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8822673741",
+                      "assigner_id": {
+                        "object": true
+                      },
+                      "assignee_id": {
+                        "object": true
+                      },
+                      "project_id": "2259097055",
+                      "section_id": {
+                        "object": true
+                      },
+                      "parent_id": {
+                        "object": true
+                      },
+                      "order": 19,
+                      "content": "Test Task",
+                      "description": "",
+                      "is_completed": false,
+                      "labels": [
+                        "json array"
+                      ],
+                      "priority": 1,
+                      "comment_count": 0,
+                      "creator_id": "32694069",
+                      "created_at": "2025-01-28T15:31:07.953037Z",
+                      "due": {
+                        "object": true
+                      },
+                      "url": "https://app.todoist.com/app/task/8822673741",
+                      "duration": {
+                        "object": true
+                      },
+                      "deadline": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Todoist2": [
+          {
+            "hints": [],
+            "startTime": 1738078268963,
+            "executionTime": 1151,
+            "source": [
+              {
+                "previousNode": "Todoist1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Todoist3": [
+          {
+            "hints": [],
+            "startTime": 1738078270114,
+            "executionTime": 1046,
+            "source": [
+              {
+                "previousNode": "Todoist2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Todoist5": [
+          {
+            "hints": [],
+            "startTime": 1738078271161,
+            "executionTime": 1306,
+            "source": [
+              {
+                "previousNode": "Todoist3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4603488029",
+                      "assigner_id": {
+                        "object": true
+                      },
+                      "assignee_id": {
+                        "object": true
+                      },
+                      "project_id": "2259097058",
+                      "section_id": "38720481",
+                      "parent_id": {
+                        "object": true
+                      },
+                      "order": 1,
+                      "content": "Click this task to see more details",
+                      "description": "",
+                      "is_completed": false,
+                      "labels": [
+                        "json array"
+                      ],
+                      "priority": 1,
+                      "comment_count": 1,
+                      "creator_id": "32694069",
+                      "created_at": "2021-02-23T09:24:40.694459Z",
+                      "due": {
+                        "object": true
+                      },
+                      "url": "https://app.todoist.com/app/task/4603488029",
+                      "duration": {
+                        "object": true
+                      },
+                      "deadline": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Todoist4": [
+          {
+            "hints": [],
+            "startTime": 1738078272467,
+            "executionTime": 854,
+            "source": [
+              {
+                "previousNode": "Todoist5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Todoist4"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:31:06.951Z",
+  "stoppedAt": "2025-01-28T15:31:13.321Z",
+  "status": "running",
+  "finished": true
+}

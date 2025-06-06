@@ -1,0 +1,172 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "path": "character-archivist-webhook",
+        "responseMode": "onReceived"
+      },
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        200,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "options": {
+          "splitBy": "auto"
+        }
+      },
+      "name": "Extract Text",
+      "type": "n8n-nodes-base.file",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "name": "Generate Embeddings",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFace",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "huggingFaceApi": {
+          "id": "your-huggingface-id",
+          "name": "HuggingFace Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": "interactions"
+      },
+      "name": "Insert into Supabase Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "your-supabase-id",
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "\nconst text = $json.text || '';\nconst metadata = {\n  user: $json.user_id || 'diego',\n  character: $json.character || 'character_y',\n  date: new Date().toISOString(),\n  tags: ['interaction', 'character archivist']\n};\nreturn [{ json: { text, metadata } }];\n"
+      },
+      "name": "Attach Metadata",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-3.5-turbo",
+        "chatMessage": [
+          {
+            "role": "system",
+            "content": "You are CHARACTER ARCHIVIST AI. Use the APP Evaluation Format to score and assess interpersonal dynamics. Output a review report, trust metrics, and friendship path recommendation."
+          },
+          {
+            "role": "user",
+            "content": "Analyze this:\n\n{{$json.text}}"
+          }
+        ]
+      },
+      "name": "Reasoning AI Review",
+      "type": "n8n-nodes-base.openAiChat",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        300
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "your-openai-id",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "table": "character_reviews"
+      },
+      "name": "Save Final Review to DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        300
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "your-postgres-id",
+          "name": "Postgres DB"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          "Extract Text"
+        ]
+      ]
+    },
+    "Extract Text": {
+      "main": [
+        [
+          "Generate Embeddings"
+        ]
+      ]
+    },
+    "Generate Embeddings": {
+      "main": [
+        [
+          "Insert into Supabase Vectorstore"
+        ]
+      ]
+    },
+    "Insert into Supabase Vectorstore": {
+      "main": [
+        [
+          "Attach Metadata"
+        ]
+      ]
+    },
+    "Attach Metadata": {
+      "main": [
+        [
+          "Reasoning AI Review"
+        ]
+      ]
+    },
+    "Reasoning AI Review": {
+      "main": [
+        [
+          "Save Final Review to DB"
+        ]
+      ]
+    }
+  }
+}

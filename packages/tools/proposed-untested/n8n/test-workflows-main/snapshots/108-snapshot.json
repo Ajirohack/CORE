@@ -1,0 +1,1326 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078143601,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set": [
+          {
+            "hints": [],
+            "startTime": 1738078143602,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "value1": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set1": [
+          {
+            "hints": [],
+            "startTime": 1738078143604,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "value2": 5
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set2": [
+          {
+            "hints": [],
+            "startTime": 1738078143605,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set3": [
+          {
+            "hints": [],
+            "startTime": 1738078143606,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop2": 2,
+                      "prop4": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set7": [
+          {
+            "hints": [],
+            "startTime": 1738078143606,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set6": [
+          {
+            "hints": [],
+            "startTime": 1738078143607,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop2": 2,
+                      "prop3": -2,
+                      "prop4": -3
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set9": [
+          {
+            "hints": [],
+            "startTime": 1738078143608,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set8": [
+          {
+            "hints": [],
+            "startTime": 1738078143609,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop3": 2,
+                      "prop4": -4
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set11": [
+          {
+            "hints": [],
+            "startTime": 1738078143610,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set10": [
+          {
+            "hints": [],
+            "startTime": 1738078143610,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop3": 2,
+                      "prop4": -4
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set13": [
+          {
+            "hints": [],
+            "startTime": 1738078143611,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set12": [
+          {
+            "hints": [],
+            "startTime": 1738078143611,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop3": 2,
+                      "prop4": -4
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function11": [
+          {
+            "hints": [],
+            "startTime": 1738078143611,
+            "executionTime": 6,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input1item1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "title": "Input1item2"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "title": "Input1item3"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function12": [
+          {
+            "hints": [],
+            "startTime": 1738078143617,
+            "executionTime": 5,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item4"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge": [
+          {
+            "hints": [],
+            "startTime": 1738078143622,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Set"
+              },
+              {
+                "previousNode": "Set1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "value1": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "value2": 5
+                    },
+                    "pairedItem": {
+                      "item": 0,
+                      "input": 1
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge1": [
+          {
+            "hints": [],
+            "startTime": 1738078143623,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Set2"
+              },
+              {
+                "previousNode": "Set3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge5": [
+          {
+            "hints": [],
+            "startTime": 1738078143624,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Set7"
+              },
+              {
+                "previousNode": "Set6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge6": [
+          {
+            "hints": [],
+            "startTime": 1738078143624,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Set7"
+              },
+              {
+                "previousNode": "Set6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge7": [
+          {
+            "hints": [],
+            "startTime": 1738078143624,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Set7"
+              },
+              {
+                "previousNode": "Set6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge8": [
+          {
+            "hints": [],
+            "startTime": 1738078143625,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Set9"
+              },
+              {
+                "previousNode": "Set8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1,
+                      "prop3": 2,
+                      "prop4": -4
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 0
+                      },
+                      {
+                        "item": 0,
+                        "input": 1
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge9": [
+          {
+            "hints": [],
+            "startTime": 1738078143625,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Set11"
+              },
+              {
+                "previousNode": "Set10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge10": [
+          {
+            "hints": [],
+            "startTime": 1738078143625,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Set13"
+              },
+              {
+                "previousNode": "Set12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge3": [
+          {
+            "hints": [],
+            "startTime": 1738078143626,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Function11"
+              },
+              {
+                "previousNode": "Function12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 0
+                      },
+                      {
+                        "item": 0,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 1
+                      },
+                      {
+                        "item": 1,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 2
+                      },
+                      {
+                        "item": 2,
+                        "input": 1
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge2": [
+          {
+            "hints": [],
+            "startTime": 1738078143627,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Function11"
+              },
+              {
+                "previousNode": "Function12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 0
+                      },
+                      {
+                        "item": 0,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 1
+                      },
+                      {
+                        "item": 1,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 2
+                      },
+                      {
+                        "item": 2,
+                        "input": 1
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge4": [
+          {
+            "hints": [],
+            "startTime": 1738078143627,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Function11"
+              },
+              {
+                "previousNode": "Function12"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 0
+                      },
+                      {
+                        "item": 0,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 1
+                      },
+                      {
+                        "item": 1,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": [
+                      {
+                        "item": 2
+                      },
+                      {
+                        "item": 2,
+                        "input": 1
+                      }
+                    ]
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item4"
+                    },
+                    "pairedItem": {
+                      "item": 3,
+                      "input": 1
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function": [
+          {
+            "hints": [],
+            "startTime": 1738078143628,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "value1": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  },
+                  {
+                    "json": {
+                      "value2": 5
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    },
+                    "index": 1
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function1": [
+          {
+            "hints": [],
+            "startTime": 1738078143633,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function5": [
+          {
+            "hints": [],
+            "startTime": 1738078143637,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function6": [
+          {
+            "hints": [],
+            "startTime": 1738078143641,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge6"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function7": [
+          {
+            "hints": [],
+            "startTime": 1738078143645,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge7"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop3": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function8": [
+          {
+            "hints": [],
+            "startTime": 1738078143649,
+            "executionTime": 5,
+            "source": [
+              {
+                "previousNode": "Merge8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1,
+                      "prop3": 2,
+                      "prop4": -4
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function9": [
+          {
+            "hints": [],
+            "startTime": 1738078143654,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge9"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function10": [
+          {
+            "hints": [],
+            "startTime": 1738078143659,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "prop1": 1,
+                      "prop2": -1
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function3": [
+          {
+            "hints": [],
+            "startTime": 1738078143663,
+            "executionTime": 5,
+            "source": [
+              {
+                "previousNode": "Merge3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    },
+                    "index": 1
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": {
+                      "item": 2
+                    },
+                    "index": 2
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function2": [
+          {
+            "hints": [],
+            "startTime": 1738078143669,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    },
+                    "index": 1
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": {
+                      "item": 2
+                    },
+                    "index": 2
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Function4": [
+          {
+            "hints": [],
+            "startTime": 1738078143673,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Merge4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "Input2item1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item2"
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    },
+                    "index": 1
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item3"
+                    },
+                    "pairedItem": {
+                      "item": 2
+                    },
+                    "index": 2
+                  },
+                  {
+                    "json": {
+                      "title": "Input2item4"
+                    },
+                    "pairedItem": {
+                      "item": 3
+                    },
+                    "index": 3
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Function4"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:03.599Z",
+  "stoppedAt": "2025-01-28T15:29:03.678Z",
+  "status": "running",
+  "finished": true
+}

@@ -1,0 +1,410 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078252495,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit": [
+          {
+            "hints": [],
+            "startTime": 1738078252495,
+            "executionTime": 763,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 835058,
+                      "name": "ck_field_835058_testfield023692619431978534",
+                      "key": "testfield0_23692619431978534",
+                      "label": "testField0.23692619431978534"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit4": [
+          {
+            "hints": [],
+            "startTime": 1738078253258,
+            "executionTime": 759,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 2059113,
+                      "name": "TestForm",
+                      "created_at": "2021-02-22T09:16:09.000Z",
+                      "type": "embed",
+                      "format": "inline",
+                      "embed_js": "https://chipper-musician-5875.kit.com/bec913a630/index.js",
+                      "embed_url": "https://chipper-musician-5875.kit.com/bec913a630",
+                      "archived": false,
+                      "uid": "bec913a630"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit1": [
+          {
+            "hints": [],
+            "startTime": 1738078254017,
+            "executionTime": 730,
+            "source": [
+              {
+                "previousNode": "ConvertKit"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 213135,
+                      "name": "ck_field_213135_testfield",
+                      "key": "testfield",
+                      "label": "testField"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit5": [
+          {
+            "hints": [],
+            "startTime": 1738078254748,
+            "executionTime": 936,
+            "source": [
+              {
+                "previousNode": "ConvertKit4"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 9726293955,
+                      "state": "inactive",
+                      "created_at": "2025-01-28T15:30:55.000Z",
+                      "source": "API::V3::SubscriptionsController (external)",
+                      "referrer": {
+                        "object": true
+                      },
+                      "subscribable_id": 2059113,
+                      "subscribable_type": "form",
+                      "subscriber": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit2": [
+          {
+            "hints": [],
+            "startTime": 1738078255684,
+            "executionTime": 894,
+            "source": [
+              {
+                "previousNode": "ConvertKit1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit7": [
+          {
+            "hints": [],
+            "startTime": 1738078256579,
+            "executionTime": 1002,
+            "source": [
+              {
+                "previousNode": "ConvertKit5"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 6162026,
+                      "name": "tag1738078256582",
+                      "created_at": "2025-01-28T15:30:57.000Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit3": [
+          {
+            "hints": [],
+            "startTime": 1738078257582,
+            "executionTime": 697,
+            "source": [
+              {
+                "previousNode": "ConvertKit2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit8": [
+          {
+            "hints": [],
+            "startTime": 1738078258280,
+            "executionTime": 2569,
+            "source": [
+              {
+                "previousNode": "ConvertKit7"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 2205755,
+                      "name": "tag1613985759319",
+                      "created_at": "2021-02-22T09:22:40.000Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit9": [
+          {
+            "hints": [],
+            "startTime": 1738078260850,
+            "executionTime": 1818,
+            "source": [
+              {
+                "previousNode": "ConvertKit8"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 9726294573,
+                      "state": "active",
+                      "created_at": "2025-01-28T15:31:02.000Z",
+                      "source": "API::V3::SubscriptionsController (external)",
+                      "referrer": {
+                        "object": true
+                      },
+                      "subscribable_id": 6162026,
+                      "subscribable_type": "tag",
+                      "subscriber": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit10": [
+          {
+            "hints": [],
+            "startTime": 1738078262669,
+            "executionTime": 1238,
+            "source": [
+              {
+                "previousNode": "ConvertKit9"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 4353892532,
+                      "state": "active",
+                      "created_at": "2025-01-28T15:31:02.000Z",
+                      "source": {
+                        "object": true
+                      },
+                      "referrer": {
+                        "object": true
+                      },
+                      "subscribable_id": 6162026,
+                      "subscribable_type": "Tag",
+                      "subscriber": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit11": [
+          {
+            "hints": [],
+            "startTime": 1738078263908,
+            "executionTime": 1442,
+            "source": [
+              {
+                "previousNode": "ConvertKit10"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 6162026,
+                      "name": "tag1738078256582",
+                      "created_at": "2025-01-28T15:30:57.000Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "ConvertKit6": [
+          {
+            "hints": [],
+            "startTime": 1738078265351,
+            "executionTime": 1573,
+            "source": [
+              {
+                "previousNode": "ConvertKit11"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                []
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "ConvertKit6"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:30:52.494Z",
+  "stoppedAt": "2025-01-28T15:31:06.924Z",
+  "status": "running",
+  "finished": true
+}

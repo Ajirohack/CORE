@@ -1,0 +1,239 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078169848,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set job name": [
+          {
+            "hints": [],
+            "startTime": 1738078169848,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "job_name": "nodemation_job_1738078169852"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe": [
+          {
+            "hints": [],
+            "startTime": 1738078169853,
+            "executionTime": 1148,
+            "source": [
+              {
+                "previousNode": "Set job name"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1738078170.827,
+                      "LanguageCode": "en-US",
+                      "Media": {
+                        "object": true
+                      },
+                      "Settings": {
+                        "object": true
+                      },
+                      "StartTime": 1738078170.845,
+                      "TranscriptionJobName": "nodemation_job_1738078169852",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe1": [
+          {
+            "hints": [],
+            "startTime": 1738078171001,
+            "executionTime": 814,
+            "source": [
+              {
+                "previousNode": "AWS Transcribe"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1738078170.827,
+                      "LanguageCode": "en-US",
+                      "Media": {
+                        "object": true
+                      },
+                      "Settings": {
+                        "object": true
+                      },
+                      "StartTime": 1738078170.845,
+                      "Transcript": {
+                        "object": true
+                      },
+                      "TranscriptionJobName": "nodemation_job_1738078169852",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe2": [
+          {
+            "hints": [],
+            "startTime": 1738078171816,
+            "executionTime": 727,
+            "source": [
+              {
+                "previousNode": "AWS Transcribe1"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1738078170.827,
+                      "LanguageCode": "en-US",
+                      "OutputLocationType": "SERVICE_BUCKET",
+                      "StartTime": 1738078170.845,
+                      "TranscriptionJobName": "nodemation_job_1738078169852",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sleep 30 seconds": [
+          {
+            "hints": [],
+            "startTime": 1738078172544,
+            "executionTime": 30007,
+            "source": [
+              {
+                "previousNode": "AWS Transcribe2"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1738078170.827,
+                      "LanguageCode": "en-US",
+                      "OutputLocationType": "SERVICE_BUCKET",
+                      "StartTime": 1738078170.845,
+                      "TranscriptionJobName": "nodemation_job_1738078169852",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe3": [
+          {
+            "hints": [],
+            "startTime": 1738078202551,
+            "executionTime": 770,
+            "source": [
+              {
+                "previousNode": "Sleep 30 seconds"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AWS Transcribe3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:29:29.847Z",
+  "stoppedAt": "2025-01-28T15:30:03.321Z",
+  "status": "running",
+  "finished": true
+}

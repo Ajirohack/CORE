@@ -1,0 +1,463 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "hints": [],
+            "startTime": 1738078238534,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack": [
+          {
+            "hints": [],
+            "startTime": 1738078238535,
+            "executionTime": 364,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "",
+                      "phone": "",
+                      "skype": "",
+                      "real_name": "nodeqa",
+                      "real_name_normalized": "nodeqa",
+                      "display_name": "",
+                      "display_name_normalized": "",
+                      "fields": {
+                        "object": true
+                      },
+                      "status_text": "Testing...",
+                      "status_emoji": ":speech_balloon:",
+                      "status_emoji_display_info": [
+                        "json array"
+                      ],
+                      "status_expiration": 0,
+                      "avatar_hash": "gc81277605b1",
+                      "email": "nodeqa@n8n.io",
+                      "image_24": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-24.png",
+                      "image_32": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-32.png",
+                      "image_48": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-48.png",
+                      "image_72": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+                      "image_192": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-192.png",
+                      "image_512": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-512.png",
+                      "status_text_canonical": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack13": [
+          {
+            "hints": [],
+            "startTime": 1738078238900,
+            "executionTime": 376,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "channel": "C01MZ82T9TR",
+                      "ts": "1738078239.151739",
+                      "message": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack1": [
+          {
+            "hints": [],
+            "startTime": 1738078239277,
+            "executionTime": 454,
+            "source": [
+              {
+                "previousNode": "Slack"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "title": "",
+                      "phone": "",
+                      "skype": "",
+                      "real_name": "nodeqa",
+                      "real_name_normalized": "nodeqa",
+                      "display_name": "",
+                      "display_name_normalized": "",
+                      "fields": {
+                        "object": true
+                      },
+                      "status_text": "Testing...",
+                      "status_emoji": ":speech_balloon:",
+                      "status_emoji_display_info": [
+                        "json array"
+                      ],
+                      "status_expiration": 0,
+                      "avatar_hash": "gc81277605b1",
+                      "email": "nodeqa@n8n.io",
+                      "image_24": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-24.png",
+                      "image_32": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-32.png",
+                      "image_48": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-48.png",
+                      "image_72": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+                      "image_192": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-192.png",
+                      "image_512": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-512.png",
+                      "status_text_canonical": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack18": [
+          {
+            "hints": [],
+            "startTime": 1738078239731,
+            "executionTime": 598,
+            "source": [
+              {
+                "previousNode": "Slack13"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack24": [
+          {
+            "hints": [],
+            "startTime": 1738078240330,
+            "executionTime": 592,
+            "source": [
+              {
+                "previousNode": "Slack13"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "presence": "away",
+                      "online": false,
+                      "auto_away": false,
+                      "manual_away": false,
+                      "connection_count": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack19": [
+          {
+            "hints": [],
+            "startTime": 1738078240923,
+            "executionTime": 574,
+            "source": [
+              {
+                "previousNode": "Slack18"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "type": "message",
+                      "message": {
+                        "object": true
+                      },
+                      "channel": "C01MZ82T9TR"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack25": [
+          {
+            "hints": [],
+            "startTime": 1738078241498,
+            "executionTime": 596,
+            "source": [
+              {
+                "previousNode": "Slack24"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "U01NE1E8FFU",
+                      "team_id": "T01MZ82R8NB",
+                      "name": "nodeqa",
+                      "deleted": false,
+                      "color": "9f69e7",
+                      "real_name": "nodeqa",
+                      "tz": "Europe/Brussels",
+                      "tz_label": "Central European Time",
+                      "tz_offset": 3600,
+                      "profile": {
+                        "object": true
+                      },
+                      "is_admin": true,
+                      "is_owner": true,
+                      "is_primary_owner": true,
+                      "is_restricted": false,
+                      "is_ultra_restricted": false,
+                      "is_bot": false,
+                      "is_app_user": false,
+                      "updated": 1738078239,
+                      "is_email_confirmed": true,
+                      "has_2fa": false,
+                      "who_can_share_contact_card": "EVERYONE"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack20": [
+          {
+            "hints": [],
+            "startTime": 1738078242095,
+            "executionTime": 866,
+            "source": [
+              {
+                "previousNode": "Slack19"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack14": [
+          {
+            "hints": [],
+            "startTime": 1738078242962,
+            "executionTime": 1113,
+            "source": [
+              {
+                "previousNode": "Slack20"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "permalink": "https://n8n-qa.slack.com/archives/C01MZ82T9TR/p1738078239151739",
+                      "channel": "C01MZ82T9TR"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack15": [
+          {
+            "hints": [],
+            "startTime": 1738078244076,
+            "executionTime": 439,
+            "source": [
+              {
+                "previousNode": "Slack14"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "channel": "C01MZ82T9TR",
+                      "ts": "1738078239.151739",
+                      "text": "Message Updated ",
+                      "message": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack16": [
+          {
+            "hints": [],
+            "startTime": 1738078244516,
+            "executionTime": 340,
+            "source": [
+              {
+                "previousNode": "Slack15"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "message_ts": "1738078244.000900"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack17": [
+          {
+            "hints": [],
+            "startTime": 1738078244857,
+            "executionTime": 526,
+            "source": [
+              {
+                "previousNode": "Slack16"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "channel": "C01MZ82T9TR",
+                      "ts": "1738078239.151739"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Slack17"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-01-28T15:30:38.532Z",
+  "stoppedAt": "2025-01-28T15:30:45.383Z",
+  "status": "running",
+  "finished": true
+}
